@@ -1,0 +1,167 @@
+{
+  "organizacao": "evolvi-solucoes",
+  "atualizado_em": "2026-11-10",
+  "areas": ["Financeiro", "Fiscal", "Departamento Pessoal", "Integração", "Infraestrutura"],
+  "projetos": [
+    {
+      "id": "marcar-pagos-nibo",
+      "nome": "Marcar Pagos (Nibo)",
+      "repositorio": "https://github.com/evolvi-solucoes/marcar-pagos-nibo",
+      "resumo": "Marca como pagos no Nibo os honorários contábeis que a Omie registra como recebidos. O cliente deixa de ver um honorário pago como vencido.",
+      "area": "Financeiro",
+      "execucao": "Tarefa agendada",
+      "documentacao": "completa",
+      "publicado": false
+    },
+    {
+      "id": "dapi-desobrigar",
+      "nome": "DAPI (desobrigar)",
+      "repositorio": "https://github.com/evolvi-solucoes/dapi-desobrigar",
+      "resumo": "Baixa os comunicados \"Desobrigar DAPI\" da SEF/MG e lista as empresas clientes desobrigadas. A área fiscal evita a entrega indevida da DAPI.",
+      "area": "Fiscal",
+      "execucao": "Serviço",
+      "documentacao": "completa",
+      "publicado": false
+    },
+    {
+      "id": "supervisor-automacoes",
+      "nome": "Supervisor de automações",
+      "repositorio": "https://github.com/evolvi-solucoes/supervisor-automacoes",
+      "resumo": "Verifica as automações do servidor a cada minuto. Mostra o estado de cada uma num painel e avisa no Slack quando uma falha.",
+      "area": "Infraestrutura",
+      "execucao": "Serviço",
+      "documentacao": "parcial",
+      "publicado": false
+    },
+    {
+      "id": "omie-lancamento-guias",
+      "nome": "Omie – lançamento de guias",
+      "repositorio": "https://github.com/evolvi-solucoes/omie-lancamento-guias",
+      "resumo": "Lê guias de impostos em PDF e lança cada guia como conta a pagar na Omie, com o PDF anexado e controle de duplicidade.",
+      "area": "Financeiro",
+      "execucao": "Serviço",
+      "documentacao": "parcial",
+      "publicado": false
+    },
+    {
+      "id": "credito-trabalhador",
+      "nome": "Crédito do Trabalhador",
+      "repositorio": "https://github.com/evolvi-solucoes/credito-trabalhador",
+      "resumo": "Baixa os arquivos mensais de empréstimo consignado de cada empresa e importa esses arquivos no Questor. Envia um relatório da competência.",
+      "area": "Departamento Pessoal",
+      "execucao": "Tarefa agendada",
+      "documentacao": "pendente",
+      "publicado": false
+    },
+    {
+      "id": "novas-admissoes",
+      "nome": "Novas admissões",
+      "repositorio": "https://github.com/evolvi-solucoes/novas-admissoes",
+      "resumo": "Identifica os documentos de admissão recebidos, vincula funcionário e empresa e avisa o responsável do Departamento Pessoal no Slack.",
+      "area": "Departamento Pessoal",
+      "execucao": "Serviço",
+      "documentacao": "pendente",
+      "publicado": false
+    },
+    {
+      "id": "holerites-questor",
+      "nome": "Holerites (Questor)",
+      "repositorio": "https://github.com/evolvi-solucoes/holerites-questor",
+      "resumo": "Emite no Questor os holerites das empresas pendentes e atualiza a situação de cada empresa no Notion.",
+      "area": "Departamento Pessoal",
+      "execucao": "Serviço",
+      "documentacao": "pendente",
+      "publicado": false
+    },
+    {
+      "id": "api-sindicatos",
+      "nome": "API de sindicatos",
+      "repositorio": "https://github.com/evolvi-solucoes/api-sindicatos",
+      "resumo": "Disponibiliza numa API a relação entre empresas e sindicatos. Atualiza os dados a cada hora e avisa no Slack quando o dado fica desatualizado.",
+      "area": "Departamento Pessoal",
+      "execucao": "Serviço",
+      "documentacao": "pendente",
+      "publicado": false
+    },
+    {
+      "id": "check-esocial",
+      "nome": "Check eSocial",
+      "repositorio": "https://github.com/evolvi-solucoes/check-esocial",
+      "resumo": "Lê os arquivos XML do eSocial de cada empresa e dá baixa da obrigação eSocial correspondente no Nibo.",
+      "area": "Departamento Pessoal",
+      "execucao": "Tarefa agendada",
+      "documentacao": "pendente",
+      "publicado": false
+    },
+    {
+      "id": "relatorio-nfse",
+      "nome": "Relatório NFS-e",
+      "repositorio": "https://github.com/evolvi-solucoes/relatorio-nfse",
+      "resumo": "Converte arquivos XML de NFS-e do padrão nacional numa planilha Excel e destaca as retenções federais com valor.",
+      "area": "Fiscal",
+      "execucao": "Serviço",
+      "documentacao": "pendente",
+      "publicado": false
+    },
+    {
+      "id": "extrator-documentos-ia",
+      "nome": "Extrator de documentos por IA",
+      "repositorio": "https://github.com/evolvi-solucoes/extrator-documentos-ia",
+      "resumo": "Lê faturas e NFS-e em PDF com IA, identifica empresa e competência, separa os documentos e gera planilhas. Roda em três serviços.",
+      "area": "Fiscal",
+      "execucao": "Serviço",
+      "documentacao": "pendente",
+      "publicado": false
+    },
+    {
+      "id": "criar-contatos-nibo",
+      "nome": "Criar contatos (Nibo)",
+      "repositorio": "https://github.com/evolvi-solucoes/criar-contatos-nibo",
+      "resumo": "Cria os contatos das empresas clientes no Nibo e libera o acesso aos departamentos. Usa uma fila com pausa para respeitar o limite do Nibo.",
+      "area": "Integração",
+      "execucao": "Serviço",
+      "documentacao": "pendente",
+      "publicado": false
+    },
+    {
+      "id": "proxy-webhooks",
+      "nome": "Proxy de webhooks",
+      "repositorio": "https://github.com/evolvi-solucoes/proxy-webhooks",
+      "resumo": "Recebe requisições de clientes, valida CNPJ e token e repassa cada requisição à API correta. Substitui um cenário pago do Make.",
+      "area": "Integração",
+      "execucao": "Serviço",
+      "documentacao": "parcial",
+      "publicado": false
+    },
+    {
+      "id": "nweb-proxy",
+      "nome": "Proxy nWeb",
+      "repositorio": "https://github.com/evolvi-solucoes/nweb-proxy",
+      "resumo": "Libera a clientes externos só as consultas e importações aprovadas do nWeb (Questor). Exige token e identifica a empresa pelo CNPJ.",
+      "area": "Integração",
+      "execucao": "Serviço",
+      "documentacao": "parcial",
+      "publicado": false
+    },
+    {
+      "id": "monitor-versao-questor",
+      "nome": "Monitor de versão do Questor",
+      "repositorio": "https://github.com/evolvi-solucoes/monitor-versao-questor",
+      "resumo": "Verifica se o Questor publicou uma versão nova e avisa a equipe no Discord. A equipe atualiza o sistema sem atraso.",
+      "area": "Infraestrutura",
+      "execucao": "Tarefa agendada",
+      "documentacao": "pendente",
+      "publicado": false
+    },
+    {
+      "id": "painel-automacoes-legado",
+      "nome": "Painel de automações (legado)",
+      "repositorio": "https://github.com/evolvi-solucoes/painel-automacoes-legado",
+      "resumo": "Mostra quais automações estão abertas no servidor e avisa no Discord quando uma para. O Supervisor de automações substitui este painel.",
+      "area": "Infraestrutura",
+      "execucao": "Serviço",
+      "documentacao": "pendente",
+      "publicado": false
+    }
+  ]
+}
