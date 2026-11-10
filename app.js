@@ -163,7 +163,10 @@ async function iniciar() {
       return true;
     });
 
-    areas = dados.areas ?? [];
+    // Uma área esquecida na lista "areas" ainda ganha botão de filtro;
+    // sem isso o projeto só aparece em "Todas".
+    const areasDosProjetos = unicos.map((p) => p.area);
+    areas = [...new Set([...(dados.areas ?? []), ...areasDosProjetos])];
     projetos = ordenar(unicos, areas);
 
     if (dados.atualizado_em) {
