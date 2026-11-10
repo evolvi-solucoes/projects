@@ -10,6 +10,13 @@ A página pública `https://evolvi-solucoes.github.io/projects/` lê esse arquiv
 
 Use junto com as skills `automacao` e `padrao-documentacao`.
 
+Papéis:
+
+- A Coordenação de TI é a dona do processo. Ela aprova toda inclusão, alteração ou remoção.
+- A equipe de TI mantém o `projetos.json`.
+- Uma automação nova entra na página até 7 dias depois de entrar em produção.
+- Rode o modo conferir sempre que uma automação entrar ou sair de produção.
+
 ## Regras de escrita
 
 - Escreva em português do Brasil, no padrão ASD-STE100 adaptado.
