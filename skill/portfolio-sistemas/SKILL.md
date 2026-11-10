@@ -113,3 +113,17 @@ Use para revisar o arquivo inteiro. Não altere nada neste modo.
 4. Teste a página com `python -m http.server 8040 --bind 127.0.0.1`.
 5. Confira a contagem de projetos e o console do navegador.
 6. Peça aprovação antes do commit e do push.
+
+## Regra de commit
+
+Faça commits simples, com uma alteração pequena cada.
+
+1. Faça um commit para cada projeto incluído, alterado ou removido.
+2. Faça um commit separado para o `CHANGELOG.md`.
+3. Escreva a mensagem curta, em português, com o prefixo `feat:`, `fix:`, `docs:` ou `chore:`.
+
+Exemplos:
+
+- `feat: inclui Check eSocial no portfólio`
+- `fix: corrige o resumo do Proxy nWeb`
+- `docs: CHANGELOG com a inclusão do Check eSocial`
