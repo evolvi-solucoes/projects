@@ -8,6 +8,9 @@ Este arquivo segue o formato Keep a Changelog e o versionamento semântico (SemV
 - Dono do processo, responsável e medidas de sucesso no PDD.
 - Coordenação de TI no escalonamento do runbook e na skill.
 - Testes de borda com dados falsos em `testes/` e `docs/testes.md`.
+- Fluxo de mudança por branch e pull request no README, no SDD e na skill.
+- Procedimento de rollback no runbook, com teste registrado.
+- ADR 0003: mudanças por pull request.
 
 ### Fixed
 - A página ignora projetos com campo vazio, valor fora do padrão ou `id` repetido.
