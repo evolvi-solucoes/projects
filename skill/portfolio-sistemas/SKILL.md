@@ -120,10 +120,10 @@ Faça commits simples, com uma alteração pequena cada.
 
 1. Faça um commit para cada projeto incluído, alterado ou removido.
 2. Faça um commit separado para o `CHANGELOG.md`.
-3. Escreva a mensagem curta, em português, com o prefixo `feat:`, `fix:`, `docs:` ou `chore:`.
+3. Escreva a mensagem curta, em inglês, com o prefixo `feat:`, `fix:`, `docs:` ou `chore:`.
 
 Exemplos:
 
-- `feat: inclui Check eSocial no portfólio`
-- `fix: corrige o resumo do Proxy nWeb`
-- `docs: CHANGELOG com a inclusão do Check eSocial`
+- `feat: add Check eSocial to the portfolio`
+- `fix: correct the Proxy nWeb summary`
+- `docs: update CHANGELOG with Check eSocial`
