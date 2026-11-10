@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portfólio de Automações</title>
+  <meta name="description" content="Diretório das automações da Evolvi Soluções, com link para o repositório de cada projeto.">
+  <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+  <header class="topo">
+    <div class="conteudo">
+      <p class="sobretitulo">Evolvi Soluções</p>
+      <h1>Portfólio de automações</h1>
+      <p class="descricao">Cada item abaixo leva ao repositório da automação. O resumo diz qual problema ela resolve.</p>
+      <p class="contagem" id="contagem" aria-live="polite"></p>
+    </div>
+  </header>
+
+  <main class="conteudo">
+    <div class="filtros">
+      <label class="busca">
+        <span class="visualmente-oculto">Buscar automação</span>
+        <input id="busca" type="search" placeholder="Buscar por nome ou resumo" autocomplete="off">
+      </label>
+      <div class="areas" id="areas" role="group" aria-label="Filtrar por área"></div>
+    </div>
+
+    <ul class="lista" id="lista"></ul>
+    <p class="vazio" id="vazio" hidden>Nenhuma automação encontrada.</p>
+    <p class="erro" id="erro" hidden>Não foi possível carregar a lista de automações.</p>
+  </main>
+
+  <footer class="rodape conteudo">
+    <p>Os projetos seguem o padrão de documentação: README, CHANGELOG, PDD, SDD, runbook e ADR.</p>
+    <p id="atualizado"></p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
