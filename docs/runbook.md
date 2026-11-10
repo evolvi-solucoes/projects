@@ -1,0 +1,32 @@
+# Runbook: Portfólio de automações
+
+Este documento guia quem opera a página. Use-o, sobretudo, durante uma falha.
+
+## Iniciar
+1. Abra **Settings > Pages** do repositório `evolvi-solucoes/projects`.
+2. Escolha a branch `main` e a pasta `/ (root)`.
+3. Clique em **Save**.
+4. Aguarde a publicação na aba **Actions**.
+
+## Parar
+1. Abra **Settings > Pages** do repositório.
+2. Em **Source**, escolha **None**, ou clique em **Unpublish site**.
+
+## Verificar saúde
+1. Abra `https://evolvi-solucoes.github.io/projects/`.
+2. Confira se a contagem mostra o número de projetos do `projetos.json`.
+3. Abra o console do navegador. Confira se não existe aviso de projeto ignorado.
+
+## Falhas comuns
+| Sintoma | Causa provável | Ação |
+|---|---|---|
+| A página mostra "Não foi possível carregar a lista de automações". | JSON inválido no `projetos.json`. | Valide o arquivo com `python -m json.tool projetos.json`. Corrija e faça o push. |
+| Um projeto não aparece. | O campo `repositorio` não começa com `https://github.com/`. | Corrija o link no `projetos.json`. |
+| O link do projeto abre o erro 404. | O repositório ainda não existe ou é privado. | Crie o repositório ou peça acesso. Confira o campo `publicado`. |
+| A alteração não aparece na página. | A publicação do Pages ainda não terminou ou falhou. | Veja a aba **Actions**. Recarregue a página sem cache. |
+| A página abre o erro 404 do GitHub Pages. | O Pages está desativado ou aponta para outra pasta. | Repita o procedimento "Iniciar". |
+
+## Escalonamento
+
+1. Equipe de TI, responsável pelo repositório `evolvi-solucoes/projects`.
+2. Administrador da organização `evolvi-solucoes` no GitHub, para problemas de permissão ou de Pages.
