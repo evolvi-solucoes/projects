@@ -95,11 +95,13 @@ function criarCartao(projeto) {
 }
 
 function filtrar() {
-  const termo = normalizar(estado.busca.trim());
+  // Cada palavra pode estar em qualquer ponto: "acao issqn" acha
+  // "Ação fiscal" com "ISSQN" no resumo, mesmo sem as duas juntas.
+  const palavras = normalizar(estado.busca).split(/\s+/).filter(Boolean);
   return projetos.filter((projeto) => {
     const naArea = estado.area === "Todas" || projeto.area === estado.area;
     const texto = normalizar(`${projeto.nome} ${projeto.resumo}`);
-    return naArea && (!termo || texto.includes(termo));
+    return naArea && palavras.every((palavra) => texto.includes(palavra));
   });
 }
 
