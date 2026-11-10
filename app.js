@@ -21,8 +21,24 @@ const estado = { busca: "", area: "Todas" };
 let projetos = [];
 let areas = [];
 
+const EXECUCOES = ["Serviço", "Tarefa agendada", "Manual"];
+
 function linkValido(url) {
   return typeof url === "string" && url.startsWith(PREFIXO_PERMITIDO);
+}
+
+function textoPreenchido(valor) {
+  return typeof valor === "string" && valor.trim() !== "";
+}
+
+// Um campo vazio gera um cartão sem título clicável ou um selo em branco;
+// é melhor esconder o projeto e avisar no console do que publicar assim.
+function projetoValido(projeto) {
+  return linkValido(projeto.repositorio)
+    && ["id", "nome", "resumo", "area"].every((campo) => textoPreenchido(projeto[campo]))
+    && EXECUCOES.includes(projeto.execucao)
+    && Object.hasOwn(ROTULO_DOCUMENTACAO, projeto.documentacao)
+    && typeof projeto.publicado === "boolean";
 }
 
 function normalizar(texto) {
@@ -128,13 +144,13 @@ async function iniciar() {
     if (!resposta.ok) throw new Error(`HTTP ${resposta.status}`);
     const dados = await resposta.json();
 
-    const descartados = dados.projetos.filter((p) => !linkValido(p.repositorio));
+    const descartados = dados.projetos.filter((p) => !projetoValido(p));
     if (descartados.length) {
-      console.warn("Projetos sem link do GitHub foram ignorados:", descartados.map((p) => p.id));
+      console.warn("Projetos com campo inválido foram ignorados:", descartados.map((p) => p.id));
     }
 
     areas = dados.areas ?? [];
-    projetos = ordenar(dados.projetos.filter((p) => linkValido(p.repositorio)), areas);
+    projetos = ordenar(dados.projetos.filter(projetoValido), areas);
 
     if (dados.atualizado_em) {
       const [ano, mes, dia] = dados.atualizado_em.split("-");
