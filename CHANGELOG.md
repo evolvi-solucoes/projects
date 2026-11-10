@@ -4,6 +4,9 @@ Este arquivo segue o formato Keep a Changelog e o versionamento semântico (SemV
 
 ## [Unreleased]
 
+### Fixed
+- Links de Omie, Crédito do Trabalhador e Proxy nWeb apontam para os repositórios reais da organização.
+
 ## [1.0.0] - 2026-11-10
 
 ### Added
