@@ -7,8 +7,13 @@ Este arquivo segue o formato Keep a Changelog e o versionamento semântico (SemV
 ### Added
 - Dono do processo, responsável e medidas de sucesso no PDD.
 - Coordenação de TI no escalonamento do runbook e na skill.
+- Testes de borda com dados falsos em `testes/` e `docs/testes.md`.
 
 ### Fixed
+- A página ignora projetos com campo vazio, valor fora do padrão ou `id` repetido.
+- A busca encontra cada palavra em separado.
+- Uma área fora da lista `areas` ganha botão de filtro.
+- Nomes e resumos longos quebram a linha em tela estreita.
 - Links de Omie, Crédito do Trabalhador e Proxy nWeb apontam para os repositórios reais da organização.
 
 ## [1.0.0] - 2026-11-10
