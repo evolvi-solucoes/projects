@@ -149,8 +149,20 @@ async function iniciar() {
       console.warn("Projetos com campo inválido foram ignorados:", descartados.map((p) => p.id));
     }
 
+    // O id é o nome do repositório: dois iguais indicam uma entrada copiada
+    // por engano. Fica a primeira, para a lista não mostrar duplicado.
+    const idsVistos = new Set();
+    const unicos = dados.projetos.filter(projetoValido).filter((p) => {
+      if (idsVistos.has(p.id)) {
+        console.warn("Projeto com id repetido foi ignorado:", p.id);
+        return false;
+      }
+      idsVistos.add(p.id);
+      return true;
+    });
+
     areas = dados.areas ?? [];
-    projetos = ordenar(dados.projetos.filter(projetoValido), areas);
+    projetos = ordenar(unicos, areas);
 
     if (dados.atualizado_em) {
       const [ano, mes, dia] = dados.atualizado_em.split("-");
