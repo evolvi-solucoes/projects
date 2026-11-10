@@ -141,7 +141,7 @@
       "area": "Integração",
       "execucao": "Serviço",
       "documentacao": "parcial",
-      "publicado": false
+      "publicado": true
     },
     {
       "id": "monitor-versao-questor",
