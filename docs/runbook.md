@@ -28,5 +28,6 @@ Este documento guia quem opera a página. Use-o, sobretudo, durante uma falha.
 
 ## Escalonamento
 
-1. Equipe de TI, responsável pelo repositório `evolvi-solucoes/projects`.
-2. Administrador da organização `evolvi-solucoes` no GitHub, para problemas de permissão ou de Pages.
+1. Equipe de TI, responsável pela página e pelo repositório `evolvi-solucoes/projects`.
+2. Coordenação de TI, dona do processo, para decidir sobre conteúdo ou para parar a página.
+3. Administrador da organização `evolvi-solucoes` no GitHub, para problemas de permissão ou de Pages.
