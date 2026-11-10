@@ -4,6 +4,10 @@ Este arquivo segue o formato Keep a Changelog e o versionamento semântico (SemV
 
 ## [Unreleased]
 
+### Added
+- Dono do processo, responsável e medidas de sucesso no PDD.
+- Coordenação de TI no escalonamento do runbook e na skill.
+
 ### Fixed
 - Links de Omie, Crédito do Trabalhador e Proxy nWeb apontam para os repositórios reais da organização.
 
