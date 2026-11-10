@@ -12,7 +12,7 @@ Cada cartão tem o nome com link para o repositório, o resumo e os selos de cla
 
 1. O navegador abre `index.html`.
 2. O `app.js` baixa o `projetos.json`, sem cache.
-3. O `app.js` descarta todo projeto com link fora de `https://github.com/`.
+3. O `app.js` descarta todo projeto com campo vazio, valor fora do padrão, link fora de `https://github.com/` ou `id` repetido.
 4. O `app.js` ordena os projetos pela ordem da lista `areas` e depois pelo nome.
 5. O `app.js` monta os cartões só com `textContent`. Nenhum texto do JSON vira HTML.
 6. A busca e o filtro por área redesenham a lista no navegador.
@@ -42,7 +42,9 @@ A página não usa credenciais. O push usa a conta GitHub de quem altera a lista
 | Erro | Tentativas | Ação final |
 |---|---|---|
 | `projetos.json` não carrega ou tem JSON inválido. | Nenhuma. | A página mostra "Não foi possível carregar a lista de automações". |
-| Projeto com link fora do GitHub. | Nenhuma. | O projeto não aparece. O console do navegador mostra o `id`. |
+| Projeto com campo vazio, valor fora do padrão ou link fora do GitHub. | Nenhuma. | O projeto não aparece. O console do navegador mostra o `id`. |
+| Dois projetos com o mesmo `id`. | Nenhuma. | Só o primeiro aparece. O console do navegador mostra o `id`. |
+| Área que não está na lista `areas`. | Nenhuma. | O projeto aparece e ganha um botão de filtro. |
 | Busca sem resultado. | Nenhuma. | A página mostra "Nenhuma automação encontrada". |
 
 ## 6. Logs e monitoramento
