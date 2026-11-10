@@ -12,6 +12,47 @@ Este documento guia quem opera a página. Use-o, sobretudo, durante uma falha.
 1. Abra **Settings > Pages** do repositório.
 2. Em **Source**, escolha **None**, ou clique em **Unpublish site**.
 
+## Desfazer uma mudança (rollback)
+
+Use este procedimento quando uma mudança publicada quebra a página ou expõe um dado indevido.
+
+ATENÇÃO: se a mudança expôs um dado indevido, pare a página primeiro. Siga "Parar". O histórico do Git continua público mesmo depois do rollback.
+
+1. Encontre os commits da mudança:
+
+   ```bash
+   git switch main
+   git pull
+   git log --oneline
+   ```
+
+2. Crie uma branch de rollback:
+
+   ```bash
+   git switch -c revert/descricao-curta
+   ```
+
+3. Desfaça os commits. Para um commit:
+
+   ```bash
+   git revert --no-edit <commit>
+   ```
+
+   Para vários commits seguidos, do mais antigo ao mais novo:
+
+   ```bash
+   git revert --no-edit <mais-antigo>^..<mais-novo>
+   ```
+
+4. Teste a página no servidor local.
+5. Envie a branch e abra um pull request para a `main`.
+6. Peça a aprovação da Coordenação de TI.
+7. Faça o merge com **Rebase and merge**.
+8. Aguarde a publicação na aba **Actions**.
+9. Siga "Verificar saúde".
+
+Nunca use `git push --force` na `main` para um rollback. O `git revert` mantém o histórico e pode ser desfeito.
+
 ## Verificar saúde
 1. Abra `https://evolvi-solucoes.github.io/projects/`.
 2. Confira se a contagem mostra o número de projetos do `projetos.json`.
