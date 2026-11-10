@@ -44,14 +44,14 @@
       "publicado": true
     },
     {
-      "id": "credito-trabalhador",
+      "id": "importar-credito-trabalhador",
       "nome": "Crédito do Trabalhador",
-      "repositorio": "https://github.com/evolvi-solucoes/credito-trabalhador",
+      "repositorio": "https://github.com/evolvi-solucoes/importar-credito-trabalhador",
       "resumo": "Baixa os arquivos mensais de empréstimo consignado de cada empresa e importa esses arquivos no Questor. Envia um relatório da competência.",
       "area": "Departamento Pessoal",
       "execucao": "Tarefa agendada",
       "documentacao": "pendente",
-      "publicado": false
+      "publicado": true
     },
     {
       "id": "novas-admissoes",
