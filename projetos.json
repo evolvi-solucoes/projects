@@ -34,14 +34,14 @@
       "publicado": false
     },
     {
-      "id": "omie-lancamento-guias",
+      "id": "nibo-omie",
       "nome": "Omie – lançamento de guias",
-      "repositorio": "https://github.com/evolvi-solucoes/omie-lancamento-guias",
+      "repositorio": "https://github.com/evolvi-solucoes/nibo-omie",
       "resumo": "Lê guias de impostos em PDF e lança cada guia como conta a pagar na Omie, com o PDF anexado e controle de duplicidade.",
       "area": "Financeiro",
       "execucao": "Serviço",
       "documentacao": "parcial",
-      "publicado": false
+      "publicado": true
     },
     {
       "id": "credito-trabalhador",
