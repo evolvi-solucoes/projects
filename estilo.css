@@ -150,6 +150,7 @@ h1 {
   background: var(--superficie);
 }
 
+.projeto { overflow-wrap: anywhere; }
 .projeto h2 { margin: 0; font-size: 1.125rem; line-height: 1.3; }
 .projeto h2 a { color: var(--destaque); text-decoration: none; }
 .projeto h2 a:hover { text-decoration: underline; }
