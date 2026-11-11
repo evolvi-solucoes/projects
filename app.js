@@ -17,7 +17,7 @@ const DOCUMENTOS = [
   ["ADRs", "docs/adr"],
 ];
 
-const estado = { busca: "", area: "Todas" };
+const estado = { busca: "", area: "Todas", situacao: "Todas" };
 let projetos = [];
 let areas = [];
 
@@ -130,8 +130,9 @@ function filtrar() {
   const palavras = normalizar(estado.busca).split(/\s+/).filter(Boolean);
   return projetos.filter((projeto) => {
     const naArea = estado.area === "Todas" || projeto.area === estado.area;
+    const naSituacao = estado.situacao === "Todas" || projeto.situacao === estado.situacao;
     const texto = normalizar(`${projeto.nome} ${projeto.resumo}`);
-    return naArea && palavras.every((palavra) => texto.includes(palavra));
+    return naArea && naSituacao && palavras.every((palavra) => texto.includes(palavra));
   });
 }
 
@@ -153,6 +154,27 @@ function desenharAreas() {
     botao.addEventListener("click", () => {
       estado.area = area;
       desenharAreas();
+      desenharLista();
+    });
+    return botao;
+  });
+  grupo.replaceChildren(...botoes);
+}
+
+// Só mostra botões das situações que existem na lista, para não oferecer
+// um filtro que sempre devolve zero projetos.
+function desenharSituacoes() {
+  const grupo = document.getElementById("situacoes");
+  const presentes = Object.keys(ROTULO_SITUACAO)
+    .filter((chave) => projetos.some((p) => p.situacao === chave));
+  const botoes = ["Todas", ...presentes].map((chave) => {
+    const rotulo = chave === "Todas" ? "Todas as situações" : ROTULO_SITUACAO[chave];
+    const botao = criar("button", "area", rotulo);
+    botao.type = "button";
+    botao.setAttribute("aria-pressed", String(chave === estado.situacao));
+    botao.addEventListener("click", () => {
+      estado.situacao = chave;
+      desenharSituacoes();
       desenharLista();
     });
     return botao;
@@ -204,6 +226,7 @@ async function iniciar() {
       document.getElementById("atualizado").textContent = `Lista atualizada em ${dia}/${mes}/${ano}.`;
     }
 
+    desenharSituacoes();
     desenharAreas();
     desenharLista();
   } catch (erro) {
