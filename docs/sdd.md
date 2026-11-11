@@ -19,7 +19,7 @@ Cada cartão tem o nome com link para o repositório, o resumo e os selos de cla
 
 Para alterar a lista:
 
-1. A pessoa usa a skill `portfolio-sistemas`.
+1. A pessoa usa a skill `projeto`.
 2. A skill lê a documentação da automação e propõe a entrada do JSON.
 3. A pessoa grava a entrada numa branch própria.
 4. A pessoa abre um pull request para a `main`.
