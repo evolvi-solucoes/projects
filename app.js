@@ -21,7 +21,28 @@ const estado = { busca: "", area: "Todas" };
 let projetos = [];
 let areas = [];
 
-const EXECUCOES = ["Serviço", "Tarefa agendada", "Manual"];
+const EXECUCOES = ["Serviço", "Tarefa agendada", "Manual", "A definir"];
+
+const ROTULO_SITUACAO = {
+  andamento: "Em andamento",
+  producao: "Em produção",
+  pausado: "Pausado",
+  desativado: "Desativado",
+};
+
+// Datas são opcionais; quando existem, precisam ser AAAA-MM-DD reais,
+// porque integrações futuras vão ler esses campos do JSON público.
+function dataValida(valor) {
+  if (valor === undefined) return true;
+  if (typeof valor !== "string" || !/^\d{4}-\d{2}-\d{2}$/.test(valor)) return false;
+  const data = new Date(`${valor}T00:00:00Z`);
+  return !Number.isNaN(data.getTime()) && data.toISOString().startsWith(valor);
+}
+
+function formatarData(valor) {
+  const [ano, mes, dia] = valor.split("-");
+  return `${dia}/${mes}/${ano}`;
+}
 
 function linkValido(url) {
   return typeof url === "string" && url.startsWith(PREFIXO_PERMITIDO);
@@ -38,7 +59,10 @@ function projetoValido(projeto) {
     && ["id", "nome", "resumo", "area"].every((campo) => textoPreenchido(projeto[campo]))
     && EXECUCOES.includes(projeto.execucao)
     && Object.hasOwn(ROTULO_DOCUMENTACAO, projeto.documentacao)
-    && typeof projeto.publicado === "boolean";
+    && Object.hasOwn(ROTULO_SITUACAO, projeto.situacao)
+    && typeof projeto.publicado === "boolean"
+    && dataValida(projeto.iniciado_em)
+    && dataValida(projeto.atualizado_em);
 }
 
 function normalizar(texto) {
@@ -71,6 +95,7 @@ function criarCartao(projeto) {
   const selos = criar("ul", "selos");
   selos.setAttribute("aria-label", "Classificação");
   selos.append(
+    criarSelo(ROTULO_SITUACAO[projeto.situacao], `selo-situacao-${projeto.situacao}`),
     criarSelo(projeto.area),
     criarSelo(projeto.execucao),
     criarSelo(ROTULO_DOCUMENTACAO[projeto.documentacao] ?? "Documentação pendente",
@@ -79,6 +104,11 @@ function criarCartao(projeto) {
   if (!projeto.publicado) selos.append(criarSelo("Repositório em migração"));
 
   item.append(titulo, endereco, resumo, selos);
+
+  const datas = [];
+  if (projeto.iniciado_em) datas.push(`Iniciado em ${formatarData(projeto.iniciado_em)}`);
+  if (projeto.atualizado_em) datas.push(`Atualizado em ${formatarData(projeto.atualizado_em)}`);
+  if (datas.length) item.append(criar("p", "datas", datas.join(" · ")));
 
   if (projeto.documentacao === "completa") {
     const docs = criar("p", "links-docs");
