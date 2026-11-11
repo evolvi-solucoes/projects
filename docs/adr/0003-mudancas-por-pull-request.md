@@ -18,7 +18,7 @@ Usar **Rebase and merge** no merge. Desfazer mudanças com `git revert`, também
 
 O teste antes do merge acontece no servidor local, com os testes de borda de `docs/testes.md`.
 
-O fluxo fica na skill `portfolio-sistemas` e na documentação. O GitHub não recebe ruleset nem regra de proteção da branch `main`. Quem mantém a página é a mesma pessoa que abre o pull request.
+O fluxo fica na skill `projeto` e na documentação. O GitHub não recebe ruleset nem regra de proteção da branch `main`. Quem mantém a página é a mesma pessoa que abre o pull request.
 
 ## Alternativas descartadas
 - Push direto na `main`: publica sem revisão e sem aprovação.
