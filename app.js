@@ -142,7 +142,7 @@ function desenharLista() {
   lista.replaceChildren(...visiveis.map(criarCartao));
   document.getElementById("vazio").hidden = visiveis.length > 0;
   document.getElementById("contagem").textContent =
-    `${visiveis.length} de ${projetos.length} automações`;
+    `${visiveis.length} de ${projetos.length} projetos`;
 }
 
 function desenharAreas() {
