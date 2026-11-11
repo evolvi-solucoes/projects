@@ -31,6 +31,7 @@ Este arquivo segue o formato Keep a Changelog e o versionamento semântico (SemV
 - A busca encontra cada palavra em separado.
 - Uma área fora da lista `areas` ganha botão de filtro.
 - Nomes e resumos longos quebram a linha em tela estreita.
+- A API de sindicatos mostra a documentação completa.
 - Links de Omie, Crédito do Trabalhador e Proxy nWeb apontam para os repositórios reais da organização.
 
 ## [1.0.0] - 2026-11-10
