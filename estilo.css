@@ -177,6 +177,18 @@ h1 {
 .selo-completa { background: var(--ok-fundo); color: var(--ok); }
 .selo-parcial { background: var(--aviso-fundo); color: var(--aviso); }
 
+.selo[class*="selo-situacao-"] { font-weight: 600; }
+.selo-situacao-producao { background: var(--ok-fundo); color: var(--ok); }
+.selo-situacao-andamento { background: var(--destaque-suave); color: var(--destaque); }
+.selo-situacao-pausado { background: var(--aviso-fundo); color: var(--aviso); }
+.selo-situacao-desativado {
+  background: var(--pendente-fundo);
+  color: var(--pendente);
+  text-decoration: line-through;
+}
+
+.datas { margin: 10px 0 0; font-size: 0.8rem; color: var(--texto-suave); }
+
 .links-docs { margin: 12px 0 0; font-size: 0.875rem; }
 .links-docs a { color: var(--destaque); margin-right: 12px; }
 
