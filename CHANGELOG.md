@@ -13,7 +13,10 @@ Este arquivo segue o formato Keep a Changelog e o versionamento semântico (SemV
 - ADR 0003: mudanças por pull request.
 
 ### Changed
-- A skill `portfolio-sistemas` passou a se chamar `projeto`. A cópia fica em `skill/projeto/SKILL.md`.
+- A skill `portfolio-sistemas` passou a se chamar `projeto`.
+
+### Removed
+- A cópia da skill saiu do repositório. A skill fica só na conta do claude.ai.
 
 ### Fixed
 - A página ignora projetos com campo vazio, valor fora do padrão ou `id` repetido.
