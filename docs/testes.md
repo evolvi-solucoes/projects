@@ -51,3 +51,13 @@ Data: 10/11/2026. Navegador: Chromium do painel do Claude, em 375 px de largura.
 |---|---|
 | 1ª | 7 casos passaram. 7 falharam: `campos-vazios`, `campos-ausentes`, `texto-longo`, `acentos`, `id-duplicado`, `area-fora-da-lista` e `valores-estranhos`. |
 | 2ª, depois das correções | 14 casos passaram. A lista real mostrou 16 de 16 automações, sem aviso no console. |
+
+## Teste de rollback
+
+O teste usa uma cópia do repositório numa pasta temporária. Ele não altera o GitHub.
+
+| Caso | Comando | Resultado esperado | Resultado em 10/11/2026 |
+|---|---|---|---|
+| Desfazer um commit | `git revert 6d964a7` | A busca antiga volta. As correções seguintes continuam. Só o `app.js` muda. | Passou. |
+| Desfazer vários commits | `git revert 7a0259a^..f1dfca8` | `app.js` e `estilo.css` ficam iguais à versão anterior às correções. | Passou. |
+| Desfazer o rollback | `git revert HEAD~5..HEAD` | Os arquivos ficam iguais à versão corrigida. | Passou. |

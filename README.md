@@ -64,7 +64,40 @@ Aviso: abrir o `index.html` direto do disco não funciona. O navegador bloqueia 
 
 Antes de publicar uma mudança no `app.js` ou no `estilo.css`, execute os testes de borda. Siga `docs/testes.md`.
 
-Para incluir ou alterar um projeto, use a skill `portfolio-sistemas`. A cópia da skill fica em `skill/portfolio-sistemas/SKILL.md`.
+Para incluir ou alterar um projeto, use a skill `projeto`. A cópia da skill fica em `skill/projeto/SKILL.md`.
+
+## Fluxo de mudança
+
+Toda mudança passa por uma branch e por um pull request. Um push na `main` publica a página.
+
+1. Atualize a `main` local:
+
+   ```bash
+   git switch main
+   git pull
+   ```
+
+2. Crie uma branch com o tipo e um nome curto:
+
+   ```bash
+   git switch -c fix/descricao-curta
+   ```
+
+3. Faça commits pequenos, um para cada mudança. Escreva a mensagem em inglês, sem linha de coautoria.
+4. Teste a página no servidor local.
+5. Se mudou o `app.js` ou o `estilo.css`, execute os testes de borda de `docs/testes.md`.
+6. Envie a branch:
+
+   ```bash
+   git push -u origin fix/descricao-curta
+   ```
+
+7. Abra um pull request da branch para a `main`.
+8. Peça a aprovação da Coordenação de TI.
+9. Depois da aprovação, faça o merge com **Rebase and merge**. Essa opção mantém os commits pequenos na `main`.
+10. Apague a branch.
+
+Para desfazer uma mudança publicada, siga "Desfazer uma mudança (rollback)" em `docs/runbook.md`.
 
 ## Limites conhecidos
 

@@ -14,7 +14,7 @@ A documentação interna das automações cita endereços de rede, caminhos do s
 
 Publicar a página como pública. Mostrar só o nome, o link do repositório, o resumo de negócio e os selos.
 
-Não publicar endereço IP, caminho de rede, nome de cliente, nome de pessoa ou segredo. A skill `portfolio-sistemas` confere essa regra antes de cada inclusão.
+Não publicar endereço IP, caminho de rede, nome de cliente, nome de pessoa ou segredo. A skill `projeto` confere essa regra antes de cada inclusão.
 
 Os repositórios das automações podem ser privados. O link pede login a quem não tem acesso.
 

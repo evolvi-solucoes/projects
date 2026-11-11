@@ -1,5 +1,5 @@
 ---
-name: portfolio-sistemas
+name: projeto
 description: Use ao incluir, alterar ou remover uma automação no portfólio de sistemas (página GitHub Pages evolvi-solucoes/projects). Lê a documentação do projeto, monta a entrada do projetos.json no padrão e confere a regra de dados públicos.
 ---
 
@@ -114,12 +114,20 @@ Use para revisar o arquivo inteiro. Não altere nada neste modo.
 
 ## Depois de gravar
 
-1. Atualize o campo `atualizado_em` com a data de hoje, no formato `AAAA-MM-DD`.
-2. Valide o JSON com `python -m json.tool projetos.json`.
-3. Registre a mudança no `CHANGELOG.md`, na seção `[Unreleased]`.
-4. Teste a página com `python -m http.server 8040 --bind 127.0.0.1`.
-5. Confira a contagem de projetos e o console do navegador.
-6. Peça aprovação antes do commit e do push.
+ATENÇÃO: nunca grave na branch `main`. Um push na `main` publica a página sem aprovação.
+
+1. Antes de gravar, crie uma branch a partir da `main` atualizada. Exemplo: `feat/inclui-check-esocial`.
+2. Atualize o campo `atualizado_em` com a data de hoje, no formato `AAAA-MM-DD`.
+3. Valide o JSON com `python -m json.tool projetos.json`.
+4. Registre a mudança no `CHANGELOG.md`, na seção `[Unreleased]`.
+5. Teste a página com `python -m http.server 8040 --bind 127.0.0.1`.
+6. Confira a contagem de projetos e o console do navegador. O console avisa sobre projeto ignorado.
+7. Peça aprovação antes do commit e do push da branch.
+8. Abra um pull request da branch para a `main`.
+9. Peça a aprovação da Coordenação de TI no pull request.
+10. Depois da aprovação, faça o merge com **Rebase and merge**.
+
+Para desfazer uma mudança, siga "Desfazer uma mudança (rollback)" em `docs/runbook.md`.
 
 ## Regra de commit
 

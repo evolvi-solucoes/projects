@@ -19,11 +19,13 @@ Cada cartão tem o nome com link para o repositório, o resumo e os selos de cla
 
 Para alterar a lista:
 
-1. A pessoa usa a skill `portfolio-sistemas`.
+1. A pessoa usa a skill `projeto`.
 2. A skill lê a documentação da automação e propõe a entrada do JSON.
-3. A pessoa aprova a entrada.
-4. A pessoa faz o commit e o push na branch `main`.
-5. O GitHub Pages publica a alteração.
+3. A pessoa grava a entrada numa branch própria.
+4. A pessoa abre um pull request para a `main`.
+5. A Coordenação de TI aprova o pull request.
+6. A pessoa faz o merge com **Rebase and merge**.
+7. O GitHub Pages publica a alteração.
 
 ## 3. Sistemas envolvidos
 | Sistema | Uso | Acesso |
@@ -56,3 +58,4 @@ A aba **Actions** do GitHub mostra o resultado de cada publicação do Pages.
 ## 7. Decisões relacionadas
 - [ADR 0001: Página estática com lista em JSON](adr/0001-pagina-estatica-com-json.md)
 - [ADR 0002: Página pública só com resumo de negócio](adr/0002-pagina-publica-so-com-resumo.md)
+- [ADR 0003: Mudanças por pull request](adr/0003-mudancas-por-pull-request.md)
