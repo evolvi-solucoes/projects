@@ -11,6 +11,7 @@ BASE = {
     "repositorio": "https://github.com/exemplo/teste",
     "resumo": "Resumo de teste.",
     "area": "Fiscal",
+    "situacao": "producao",
     "execucao": "Serviço",
     "documentacao": "completa",
     "publicado": True,
@@ -71,6 +72,26 @@ CASOS = {
     "area-fora-da-lista": lista(projeto(nome="Area nova", area="Jurídico")),
     "valores-estranhos": lista(
         projeto(documentacao="xyz", publicado="false", execucao=""),
+    ),
+    "situacoes": lista(
+        projeto(id="s1", nome="Andamento", situacao="andamento",
+                execucao="A definir", iniciado_em="2026-11-11",
+                atualizado_em="2026-11-11"),
+        projeto(id="s2", nome="Producao", situacao="producao"),
+        projeto(id="s3", nome="Pausado", situacao="pausado"),
+        projeto(id="s4", nome="Desativado", situacao="desativado"),
+    ),
+    "situacao-invalida": lista(
+        projeto(id="ok", nome="Valido"),
+        projeto(id="sem", nome="Sem situacao", situacao=None),
+        projeto(id="outra", nome="Outra situacao", situacao="concluido"),
+    ),
+    "datas-invalidas": lista(
+        projeto(id="ok", nome="Valido", iniciado_em="2026-02-28"),
+        projeto(id="d1", nome="Dia 30 de fevereiro",
+                iniciado_em="2026-02-30"),
+        projeto(id="d2", nome="Formato BR", atualizado_em="11/11/2026"),
+        projeto(id="d3", nome="Numero", iniciado_em=20261111),
     ),
     "volume-500": lista(*[
         projeto(id=f"p{i}", nome=f"Projeto {i:03d}") for i in range(500)
