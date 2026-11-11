@@ -32,7 +32,7 @@ A página não usa variáveis de ambiente nem segredos.
 | `projetos.json` | Lista das automações. É o único arquivo que muda no dia a dia. |
 | `index.html` | Estrutura da página. |
 | `estilo.css` | Aparência, com tema claro e escuro. |
-| `app.js` | Lê o `projetos.json` e monta a lista, a busca e o filtro por área. |
+| `app.js` | Lê o `projetos.json` e monta a lista, a busca e os filtros por situação e por área. |
 | `.nojekyll` | Faz o GitHub Pages publicar os arquivos sem o Jekyll. |
 
 ### Campos de cada projeto em `projetos.json`
@@ -44,9 +44,14 @@ A página não usa variáveis de ambiente nem segredos.
 | `repositorio` | Sim | Endereço do repositório. Precisa começar com `https://github.com/`. |
 | `resumo` | Sim | O problema que a automação resolve. Até duas frases, linguagem de negócio. |
 | `area` | Sim | Uma das áreas da lista `areas`. |
-| `execucao` | Sim | `Serviço`, `Tarefa agendada` ou `Manual`. |
+| `situacao` | Sim | `andamento`, `producao`, `pausado` ou `desativado`. |
+| `execucao` | Sim | `Serviço`, `Tarefa agendada`, `Manual` ou `A definir`. |
 | `documentacao` | Sim | `completa`, `parcial` ou `pendente`. |
 | `publicado` | Sim | `true` quando o repositório já existe no GitHub. |
+| `iniciado_em` | Não | Data de início do projeto, no formato `AAAA-MM-DD`. |
+| `atualizado_em` | Não | Data da última mudança do projeto, no formato `AAAA-MM-DD`. |
+
+A página ignora o projeto com campo obrigatório inválido ou com data fora do formato.
 
 Aviso: a página é pública. Não escreva no resumo endereço IP, caminho de rede, nome de cliente, nome de pessoa ou segredo.
 
