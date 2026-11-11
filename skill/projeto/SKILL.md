@@ -1,5 +1,5 @@
 ---
-name: portfolio-sistemas
+name: projeto
 description: Use ao incluir, alterar ou remover uma automação no portfólio de sistemas (página GitHub Pages evolvi-solucoes/projects). Lê a documentação do projeto, monta a entrada do projetos.json no padrão e confere a regra de dados públicos.
 ---
 
