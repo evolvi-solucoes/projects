@@ -26,6 +26,7 @@ Este arquivo segue o formato Keep a Changelog e o versionamento semântico (SemV
 - A cópia da skill saiu do repositório. A skill fica só na conta do claude.ai.
 
 ### Fixed
+- A data "Lista atualizada em" mostra 11/11/2026, a data da inclusão da situação.
 - A página ignora projetos com campo vazio, valor fora do padrão ou `id` repetido.
 - A busca encontra cada palavra em separado.
 - Uma área fora da lista `areas` ganha botão de filtro.
