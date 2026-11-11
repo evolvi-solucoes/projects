@@ -17,11 +17,32 @@ const DOCUMENTOS = [
   ["ADRs", "docs/adr"],
 ];
 
-const estado = { busca: "", area: "Todas" };
+const estado = { busca: "", area: "Todas", situacao: "Todas" };
 let projetos = [];
 let areas = [];
 
-const EXECUCOES = ["Serviço", "Tarefa agendada", "Manual"];
+const EXECUCOES = ["Serviço", "Tarefa agendada", "Manual", "A definir"];
+
+const ROTULO_SITUACAO = {
+  andamento: "Em andamento",
+  producao: "Em produção",
+  pausado: "Pausado",
+  desativado: "Desativado",
+};
+
+// Datas são opcionais; quando existem, precisam ser AAAA-MM-DD reais,
+// porque integrações futuras vão ler esses campos do JSON público.
+function dataValida(valor) {
+  if (valor === undefined) return true;
+  if (typeof valor !== "string" || !/^\d{4}-\d{2}-\d{2}$/.test(valor)) return false;
+  const data = new Date(`${valor}T00:00:00Z`);
+  return !Number.isNaN(data.getTime()) && data.toISOString().startsWith(valor);
+}
+
+function formatarData(valor) {
+  const [ano, mes, dia] = valor.split("-");
+  return `${dia}/${mes}/${ano}`;
+}
 
 function linkValido(url) {
   return typeof url === "string" && url.startsWith(PREFIXO_PERMITIDO);
@@ -38,7 +59,10 @@ function projetoValido(projeto) {
     && ["id", "nome", "resumo", "area"].every((campo) => textoPreenchido(projeto[campo]))
     && EXECUCOES.includes(projeto.execucao)
     && Object.hasOwn(ROTULO_DOCUMENTACAO, projeto.documentacao)
-    && typeof projeto.publicado === "boolean";
+    && Object.hasOwn(ROTULO_SITUACAO, projeto.situacao)
+    && typeof projeto.publicado === "boolean"
+    && dataValida(projeto.iniciado_em)
+    && dataValida(projeto.atualizado_em);
 }
 
 function normalizar(texto) {
@@ -71,6 +95,7 @@ function criarCartao(projeto) {
   const selos = criar("ul", "selos");
   selos.setAttribute("aria-label", "Classificação");
   selos.append(
+    criarSelo(ROTULO_SITUACAO[projeto.situacao], `selo-situacao-${projeto.situacao}`),
     criarSelo(projeto.area),
     criarSelo(projeto.execucao),
     criarSelo(ROTULO_DOCUMENTACAO[projeto.documentacao] ?? "Documentação pendente",
@@ -79,6 +104,11 @@ function criarCartao(projeto) {
   if (!projeto.publicado) selos.append(criarSelo("Repositório em migração"));
 
   item.append(titulo, endereco, resumo, selos);
+
+  const datas = [];
+  if (projeto.iniciado_em) datas.push(`Iniciado em ${formatarData(projeto.iniciado_em)}`);
+  if (projeto.atualizado_em) datas.push(`Atualizado em ${formatarData(projeto.atualizado_em)}`);
+  if (datas.length) item.append(criar("p", "datas", datas.join(" · ")));
 
   if (projeto.documentacao === "completa") {
     const docs = criar("p", "links-docs");
@@ -100,8 +130,9 @@ function filtrar() {
   const palavras = normalizar(estado.busca).split(/\s+/).filter(Boolean);
   return projetos.filter((projeto) => {
     const naArea = estado.area === "Todas" || projeto.area === estado.area;
+    const naSituacao = estado.situacao === "Todas" || projeto.situacao === estado.situacao;
     const texto = normalizar(`${projeto.nome} ${projeto.resumo}`);
-    return naArea && palavras.every((palavra) => texto.includes(palavra));
+    return naArea && naSituacao && palavras.every((palavra) => texto.includes(palavra));
   });
 }
 
@@ -111,7 +142,7 @@ function desenharLista() {
   lista.replaceChildren(...visiveis.map(criarCartao));
   document.getElementById("vazio").hidden = visiveis.length > 0;
   document.getElementById("contagem").textContent =
-    `${visiveis.length} de ${projetos.length} automações`;
+    `${visiveis.length} de ${projetos.length} projetos`;
 }
 
 function desenharAreas() {
@@ -123,6 +154,27 @@ function desenharAreas() {
     botao.addEventListener("click", () => {
       estado.area = area;
       desenharAreas();
+      desenharLista();
+    });
+    return botao;
+  });
+  grupo.replaceChildren(...botoes);
+}
+
+// Só mostra botões das situações que existem na lista, para não oferecer
+// um filtro que sempre devolve zero projetos.
+function desenharSituacoes() {
+  const grupo = document.getElementById("situacoes");
+  const presentes = Object.keys(ROTULO_SITUACAO)
+    .filter((chave) => projetos.some((p) => p.situacao === chave));
+  const botoes = ["Todas", ...presentes].map((chave) => {
+    const rotulo = chave === "Todas" ? "Todas as situações" : ROTULO_SITUACAO[chave];
+    const botao = criar("button", "area", rotulo);
+    botao.type = "button";
+    botao.setAttribute("aria-pressed", String(chave === estado.situacao));
+    botao.addEventListener("click", () => {
+      estado.situacao = chave;
+      desenharSituacoes();
       desenharLista();
     });
     return botao;
@@ -174,6 +226,7 @@ async function iniciar() {
       document.getElementById("atualizado").textContent = `Lista atualizada em ${dia}/${mes}/${ano}.`;
     }
 
+    desenharSituacoes();
     desenharAreas();
     desenharLista();
   } catch (erro) {

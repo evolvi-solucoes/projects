@@ -41,6 +41,9 @@ Aviso: não gere as pastas dentro do repositório. O GitHub Pages publicaria os 
 | `id-duplicado` | Dois projetos com o mesmo `id`. | Só o primeiro aparece. Aviso no console. |
 | `area-fora-da-lista` | `area` que não está na lista `areas`. | O projeto aparece e ganha um botão de filtro. |
 | `valores-estranhos` | `documentacao`, `execucao` e `publicado` fora do padrão. | Projeto ignorado. Aviso no console. |
+| `situacoes` | Um projeto em cada situação, um deles com datas. | Quatro selos de situação, as datas em formato `DD/MM/AAAA` e um botão de filtro para cada situação. |
+| `situacao-invalida` | Situação ausente e situação fora da lista. | Só o projeto válido aparece. |
+| `datas-invalidas` | 30 de fevereiro, data em formato brasileiro e data como número. | Só o projeto válido aparece. |
 | `volume-500` | 500 projetos. | A lista carrega. A busca responde em menos de 50 ms. |
 
 ## Última execução
@@ -51,6 +54,7 @@ Data: 10/11/2026. Navegador: Chromium do painel do Claude, em 375 px de largura.
 |---|---|
 | 1ª | 7 casos passaram. 7 falharam: `campos-vazios`, `campos-ausentes`, `texto-longo`, `acentos`, `id-duplicado`, `area-fora-da-lista` e `valores-estranhos`. |
 | 2ª, depois das correções | 14 casos passaram. A lista real mostrou 16 de 16 automações, sem aviso no console. |
+| 3ª, 11/11/2026, com situação e datas | 17 casos passaram. A lista real mostrou 16 de 16 projetos "Em produção", sem aviso no console. |
 
 ## Teste de rollback
 

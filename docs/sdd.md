@@ -6,26 +6,31 @@
 
 Uma página estática no GitHub Pages lê o arquivo `projetos.json` e mostra um cartão para cada automação.
 
-Cada cartão tem o nome com link para o repositório, o resumo e os selos de classificação.
+Cada cartão tem o nome com link para o repositório, o resumo, os selos de classificação e as datas, quando existem.
+
+O primeiro selo mostra a situação do projeto: "Em andamento", "Em produção", "Pausado" ou "Desativado".
 
 ## 2. Fluxo
 
 1. O navegador abre `index.html`.
 2. O `app.js` baixa o `projetos.json`, sem cache.
-3. O `app.js` descarta todo projeto com campo vazio, valor fora do padrão, link fora de `https://github.com/` ou `id` repetido.
+3. O `app.js` descarta todo projeto com campo vazio, valor fora do padrão, situação desconhecida, data fora do formato `AAAA-MM-DD`, link fora de `https://github.com/` ou `id` repetido.
 4. O `app.js` ordena os projetos pela ordem da lista `areas` e depois pelo nome.
 5. O `app.js` monta os cartões só com `textContent`. Nenhum texto do JSON vira HTML.
-6. A busca e o filtro por área redesenham a lista no navegador.
+6. A busca e os filtros por situação e por área redesenham a lista no navegador.
+7. O filtro por situação mostra só as situações presentes na lista.
 
-Para alterar a lista:
+Para iniciar um projeto ou mudar a situação dele:
 
-1. A pessoa usa a skill `projeto`.
-2. A skill lê a documentação da automação e propõe a entrada do JSON.
-3. A pessoa grava a entrada numa branch própria.
-4. A pessoa abre um pull request para a `main`.
-5. A Coordenação de TI aprova o pull request.
-6. A pessoa faz o merge com **Rebase and merge**.
-7. O GitHub Pages publica a alteração.
+1. A pessoa usa a skill `projeto`, junto com as skills `automacao` e `documentacao`.
+2. No início, a skill prepara a documentação do projeto e propõe a entrada com a situação `andamento`.
+3. A cada evolução, a skill propõe a nova situação e atualiza a data `atualizado_em`.
+4. A pessoa grava a entrada numa branch própria.
+5. A pessoa abre um pull request para a `main`.
+6. A Coordenação de TI aprova o pull request.
+7. A pessoa faz o merge com **Rebase and merge**.
+8. O GitHub Pages publica a alteração.
+9. A skill executa o passo "Avisar integrações". Hoje esse passo não tem ação.
 
 ## 3. Sistemas envolvidos
 | Sistema | Uso | Acesso |
@@ -44,7 +49,7 @@ A página não usa credenciais. O push usa a conta GitHub de quem altera a lista
 | Erro | Tentativas | Ação final |
 |---|---|---|
 | `projetos.json` não carrega ou tem JSON inválido. | Nenhuma. | A página mostra "Não foi possível carregar a lista de automações". |
-| Projeto com campo vazio, valor fora do padrão ou link fora do GitHub. | Nenhuma. | O projeto não aparece. O console do navegador mostra o `id`. |
+| Projeto com campo vazio, valor fora do padrão, situação desconhecida, data inválida ou link fora do GitHub. | Nenhuma. | O projeto não aparece. O console do navegador mostra o `id`. |
 | Dois projetos com o mesmo `id`. | Nenhuma. | Só o primeiro aparece. O console do navegador mostra o `id`. |
 | Área que não está na lista `areas`. | Nenhuma. | O projeto aparece e ganha um botão de filtro. |
 | Busca sem resultado. | Nenhuma. | A página mostra "Nenhuma automação encontrada". |
@@ -59,3 +64,4 @@ A aba **Actions** do GitHub mostra o resultado de cada publicação do Pages.
 - [ADR 0001: Página estática com lista em JSON](adr/0001-pagina-estatica-com-json.md)
 - [ADR 0002: Página pública só com resumo de negócio](adr/0002-pagina-publica-so-com-resumo.md)
 - [ADR 0003: Mudanças por pull request](adr/0003-mudancas-por-pull-request.md)
+- [ADR 0004: Situação e datas no JSON](adr/0004-situacao-e-datas-no-json.md)

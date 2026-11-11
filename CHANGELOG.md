@@ -11,9 +11,19 @@ Este arquivo segue o formato Keep a Changelog e o versionamento semântico (SemV
 - Fluxo de mudança por branch e pull request no README, no SDD e na skill.
 - Procedimento de rollback no runbook, com teste registrado.
 - ADR 0003: mudanças por pull request.
+- Situação de cada projeto: em andamento, em produção, pausado ou desativado. A página mostra um selo e um filtro.
+- Datas opcionais de início e de última mudança em cada projeto.
+- ADR 0004: situação e datas no JSON, para integrações futuras.
+- Testes de borda de situação e de datas.
 
 ### Changed
-- A skill `portfolio-sistemas` passou a se chamar `projeto`. A cópia fica em `skill/projeto/SKILL.md`.
+- A skill `portfolio-sistemas` passou a se chamar `projeto`.
+- O portfólio mostra os projetos desde o início, e não só as automações em produção.
+- A contagem da página diz "projetos" em vez de "automações".
+- A forma de execução aceita o valor "A definir".
+
+### Removed
+- A cópia da skill saiu do repositório. A skill fica só na conta do claude.ai.
 
 ### Fixed
 - A página ignora projetos com campo vazio, valor fora do padrão ou `id` repetido.
