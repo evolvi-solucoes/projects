@@ -12,6 +12,9 @@ Este arquivo segue o formato Keep a Changelog e o versionamento semântico (SemV
 - Procedimento de rollback no runbook, com teste registrado.
 - ADR 0003: mudanças por pull request.
 
+### Changed
+- A skill `portfolio-sistemas` passou a se chamar `projeto`. A cópia fica em `skill/projeto/SKILL.md`.
+
 ### Fixed
 - A página ignora projetos com campo vazio, valor fora do padrão ou `id` repetido.
 - A busca encontra cada palavra em separado.
