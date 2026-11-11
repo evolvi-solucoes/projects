@@ -64,7 +64,7 @@ Aviso: abrir o `index.html` direto do disco não funciona. O navegador bloqueia 
 
 Antes de publicar uma mudança no `app.js` ou no `estilo.css`, execute os testes de borda. Siga `docs/testes.md`.
 
-Para incluir ou alterar um projeto, use a skill `portfolio-sistemas`. A cópia da skill fica em `skill/portfolio-sistemas/SKILL.md`.
+Para incluir ou alterar um projeto, use a skill `projeto`. A cópia da skill fica em `skill/projeto/SKILL.md`.
 
 ## Fluxo de mudança
 
