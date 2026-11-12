@@ -214,6 +214,18 @@
       "documentacao": "completa",
       "publicado": true,
       "atualizado_em": "2026-11-12"
+    },
+    {
+      "id": "notion-analyst-sync",
+      "nome": "Sincronização do Analista Responsável",
+      "repositorio": "https://github.com/evolvi-solucoes/notion-analyst-sync",
+      "resumo": "Mantém o analista responsável de cada departamento igual no Notion e no Nibo. O cadastro da equipe manda, e o Nibo reflete a escolha.",
+      "area": "Integração",
+      "situacao": "producao",
+      "execucao": "A definir",
+      "documentacao": "completa",
+      "publicado": true,
+      "atualizado_em": "2026-11-12"
     }
   ]
 }
