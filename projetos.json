@@ -226,6 +226,18 @@
       "documentacao": "completa",
       "publicado": true,
       "atualizado_em": "2026-11-12"
+    },
+    {
+      "id": "notion-cnpj-auditor",
+      "nome": "Auditoria de Dados Cadastrais (CNPJ)",
+      "repositorio": "https://github.com/evolvi-solucoes/notion-cnpj-auditor",
+      "resumo": "Mantém os dados cadastrais das empresas clientes iguais aos da Receita Federal. O cadastro deixa de ficar desatualizado após alterações contratuais.",
+      "area": "Integração",
+      "situacao": "producao",
+      "execucao": "A definir",
+      "documentacao": "completa",
+      "publicado": true,
+      "atualizado_em": "2026-11-12"
     }
   ]
 }
