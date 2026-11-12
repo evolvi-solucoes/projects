@@ -190,6 +190,18 @@
       "documentacao": "completa",
       "publicado": true,
       "atualizado_em": "2026-11-12"
+    },
+    {
+      "id": "alerta-cct",
+      "nome": "Alerta de Convenções Coletivas (CCT)",
+      "repositorio": "https://github.com/evolvi-solucoes/alerta-cct",
+      "resumo": "Avisa o Departamento Pessoal quando um sindicato de empresa ativa registra uma nova Convenção Coletiva vigente. A equipe não consulta mais o site do Ministério do Trabalho à mão.",
+      "area": "Departamento Pessoal",
+      "situacao": "producao",
+      "execucao": "Tarefa agendada",
+      "documentacao": "completa",
+      "publicado": true,
+      "atualizado_em": "2026-11-12"
     }
   ]
 }
