@@ -202,6 +202,18 @@
       "documentacao": "completa",
       "publicado": true,
       "atualizado_em": "2026-11-12"
+    },
+    {
+      "id": "guias-whatsapp",
+      "nome": "Guias por WhatsApp",
+      "repositorio": "https://github.com/evolvi-solucoes/guias-whatsapp",
+      "resumo": "Envia ao cliente, pelo WhatsApp, as guias e os documentos do Nibo. Registra no Nibo quando o cliente visualiza cada um.",
+      "area": "Integração",
+      "situacao": "andamento",
+      "execucao": "A definir",
+      "documentacao": "completa",
+      "publicado": true,
+      "atualizado_em": "2026-11-12"
     }
   ]
 }
