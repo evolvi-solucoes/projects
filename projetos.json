@@ -1,6 +1,6 @@
 {
   "organizacao": "evolvi-solucoes",
-  "atualizado_em": "2026-11-11",
+  "atualizado_em": "2026-11-12",
   "areas": ["Financeiro", "Fiscal", "Departamento Pessoal", "Integração", "Infraestrutura"],
   "projetos": [
     {
@@ -178,6 +178,18 @@
       "execucao": "Serviço",
       "documentacao": "pendente",
       "publicado": false
+    },
+    {
+      "id": "gob-sync",
+      "nome": "Sincronização do Crédito Trabalhador",
+      "repositorio": "https://github.com/evolvi-solucoes/gob-sync",
+      "resumo": "Copia do GOB para o Notion quais empresas têm consignado ativo e quanto pagam por mês. O Departamento Pessoal consulta o dado sem abrir o GOB.",
+      "area": "Departamento Pessoal",
+      "situacao": "producao",
+      "execucao": "Tarefa agendada",
+      "documentacao": "completa",
+      "publicado": true,
+      "atualizado_em": "2026-11-12"
     }
   ]
 }
