@@ -5,6 +5,7 @@ Este arquivo segue o formato Keep a Changelog e o versionamento semântico (SemV
 ## [Unreleased]
 
 ### Added
+- Projeto `gob-sync` (Sincronização do Crédito Trabalhador) em produção, com documentação completa.
 - Dono do processo, responsável e medidas de sucesso no PDD.
 - Coordenação de TI no escalonamento do runbook e na skill.
 - Testes de borda com dados falsos em `testes/` e `docs/testes.md`.
