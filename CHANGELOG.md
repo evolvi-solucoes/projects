@@ -5,6 +5,7 @@ Este arquivo segue o formato Keep a Changelog e o versionamento semântico (SemV
 ## [Unreleased]
 
 ### Added
+- Projeto `omie-nibo-envio` (Omie – envio de documentos ao Nibo) em produção, com documentação completa.
 - Projeto `notion-name-sync` (Sincronização de Nome de Empresa) em produção, com documentação completa.
 - Projeto `notion-cnpj-auditor` (Auditoria de Dados Cadastrais) em produção, com documentação completa.
 - Projeto `notion-analyst-sync` (Sincronização do Analista Responsável) em produção, com documentação completa.
