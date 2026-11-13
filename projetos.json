@@ -238,6 +238,18 @@
       "documentacao": "completa",
       "publicado": true,
       "atualizado_em": "2026-11-12"
+    },
+    {
+      "id": "notion-name-sync",
+      "nome": "Sincronização de Nome de Empresa",
+      "repositorio": "https://github.com/evolvi-solucoes/notion-name-sync",
+      "resumo": "Mantém o nome de cada empresa igual nos cadastros auxiliares, na Omie e no Nibo. A equipe vê o mesmo nome em todo sistema.",
+      "area": "Integração",
+      "situacao": "producao",
+      "execucao": "A definir",
+      "documentacao": "completa",
+      "publicado": true,
+      "atualizado_em": "2026-11-12"
     }
   ]
 }
