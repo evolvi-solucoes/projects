@@ -5,6 +5,8 @@ Este arquivo segue o formato Keep a Changelog e o versionamento semântico (SemV
 ## [Unreleased]
 
 ### Added
+- Projeto `evolvi-cronus` (Cronus, controle de tempo por cliente) em andamento, com documentação completa.
+- Área `Gestão` na lista de áreas.
 - Projeto `sublimite-sn-cpf` (Sublimite SN por sócio) em produção, com documentação completa.
 - Projeto `omie-nibo-envio` (Omie – envio de documentos ao Nibo) em produção, com documentação completa.
 - Projeto `notion-name-sync` (Sincronização de Nome de Empresa) em produção, com documentação completa.
