@@ -1,6 +1,6 @@
 {
   "organizacao": "evolvi-solucoes",
-  "atualizado_em": "2026-11-12",
+  "atualizado_em": "2026-11-13",
   "areas": ["Financeiro", "Fiscal", "Departamento Pessoal", "Integração", "Infraestrutura"],
   "projetos": [
     {
@@ -263,6 +263,18 @@
       "publicado": true,
       "iniciado_em": "2026-10-27",
       "atualizado_em": "2026-11-12"
+    },
+    {
+      "id": "sublimite-sn-cpf",
+      "nome": "Sublimite SN por sócio",
+      "repositorio": "https://github.com/evolvi-solucoes/sublimite-sn-cpf",
+      "resumo": "Soma a receita das empresas de um mesmo sócio e compara com o sublimite estadual do Simples Nacional. A coordenação fiscal vê quais sócios se aproximam do limite.",
+      "area": "Fiscal",
+      "situacao": "producao",
+      "execucao": "Manual",
+      "documentacao": "completa",
+      "publicado": true,
+      "atualizado_em": "2026-11-13"
     }
   ]
 }
