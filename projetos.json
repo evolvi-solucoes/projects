@@ -1,7 +1,7 @@
 {
   "organizacao": "evolvi-solucoes",
   "atualizado_em": "2026-11-13",
-  "areas": ["Financeiro", "Fiscal", "Departamento Pessoal", "Integração", "Infraestrutura"],
+  "areas": ["Financeiro", "Fiscal", "Departamento Pessoal", "Integração", "Infraestrutura", "Gestão"],
   "projetos": [
     {
       "id": "marcar-pagos-nibo",
@@ -272,6 +272,18 @@
       "area": "Fiscal",
       "situacao": "producao",
       "execucao": "Manual",
+      "documentacao": "completa",
+      "publicado": true,
+      "atualizado_em": "2026-11-13"
+    },
+    {
+      "id": "evolvi-cronus",
+      "nome": "Cronus",
+      "repositorio": "https://github.com/evolvi-solucoes/evolvi-cronus",
+      "resumo": "Mede o tempo da equipe dedicado a cada empresa cliente. A coordenação planeja o mês e acompanha o time com dados reais.",
+      "area": "Gestão",
+      "situacao": "andamento",
+      "execucao": "A definir",
       "documentacao": "completa",
       "publicado": true,
       "atualizado_em": "2026-11-13"
