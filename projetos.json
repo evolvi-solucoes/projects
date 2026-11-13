@@ -250,6 +250,19 @@
       "documentacao": "completa",
       "publicado": true,
       "atualizado_em": "2026-11-12"
+    },
+    {
+      "id": "omie-nibo-envio",
+      "nome": "Omie – envio de documentos ao Nibo",
+      "repositorio": "https://github.com/evolvi-solucoes/omie-nibo-envio",
+      "resumo": "Envia ao Nibo as NFS-e, os recibos e os boletos emitidos na Omie. O cliente recebe tudo no Nibo, sem o envio manual de até 700 arquivos por mês.",
+      "area": "Financeiro",
+      "situacao": "producao",
+      "execucao": "Serviço",
+      "documentacao": "completa",
+      "publicado": true,
+      "iniciado_em": "2026-10-27",
+      "atualizado_em": "2026-11-12"
     }
   ]
 }
