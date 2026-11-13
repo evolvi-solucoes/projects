@@ -145,6 +145,27 @@ function desenharLista() {
     `${visiveis.length} de ${projetos.length} projetos`;
 }
 
+// Números do portfólio inteiro, não da busca: não mudam ao filtrar.
+function desenharEstatisticas() {
+  const total = projetos.length;
+  const emProducao = projetos.filter((p) => p.situacao === "producao").length;
+  const completas = projetos.filter((p) => p.documentacao === "completa").length;
+  const pct = total ? Math.round((completas / total) * 100) : 0;
+  const itens = [
+    [total, "automações no portfólio"],
+    [emProducao, "em produção"],
+    [`${pct}%`, "com documentação completa"],
+    [areas.length, "áreas atendidas"],
+  ];
+  document.getElementById("estatisticas").replaceChildren(...itens.map(([valor, rotulo]) => {
+    const bloco = criar("div", "estatistica");
+    const rotuloEl = criar("dt", null, rotulo);
+    const valorEl = criar("dd", null, String(valor));
+    bloco.append(valorEl, rotuloEl);
+    return bloco;
+  }));
+}
+
 function desenharAreas() {
   const grupo = document.getElementById("areas");
   const botoes = ["Todas", ...areas].map((area) => {
@@ -226,6 +247,7 @@ async function iniciar() {
       document.getElementById("atualizado").textContent = `Lista atualizada em ${dia}/${mes}/${ano}.`;
     }
 
+    desenharEstatisticas();
     desenharSituacoes();
     desenharAreas();
     desenharLista();

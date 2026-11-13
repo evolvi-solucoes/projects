@@ -5,17 +5,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Portfólio de Automações</title>
   <meta name="description" content="Diretório das automações da Evolvi Soluções, com link para o repositório de cada projeto.">
+  <link rel="icon" type="image/svg+xml" href="assets/evolvi-mark.svg">
   <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
+  <nav class="nav">
+    <div class="conteudo nav-interno">
+      <a class="logo" href="https://github.com/evolvi-solucoes" rel="noopener" aria-label="Evolvi Soluções">
+        <img class="logo-claro" src="assets/evolvi-logo.svg" alt="Evolvi" width="116" height="35">
+        <img class="logo-escuro" src="assets/evolvi-logo-colored-white.svg" alt="" width="116" height="35">
+      </a>
+      <span class="selo-nav">Portfólio</span>
+    </div>
+  </nav>
+
   <header class="topo">
     <div class="conteudo">
-      <p class="sobretitulo">Evolvi Soluções</p>
-      <h1>Portfólio de automações</h1>
-      <p class="descricao">Cada item abaixo leva ao repositório da automação. O resumo diz qual problema ela resolve.</p>
+      <p class="sobretitulo">Portfólio de automações</p>
+      <h1>Cada automação, <span class="destaque-gradiente">um problema a menos.</span></h1>
+      <p class="descricao">Explore o que a Evolvi já colocou para rodar. Cada item leva ao repositório e diz qual problema a automação resolve.</p>
       <p class="contagem" id="contagem" aria-live="polite"></p>
     </div>
   </header>
+
+  <section class="conteudo faixa-tinta-externa" aria-label="Números do portfólio">
+    <dl class="faixa-tinta" id="estatisticas"></dl>
+  </section>
 
   <main class="conteudo">
     <div class="filtros">
