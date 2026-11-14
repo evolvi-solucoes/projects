@@ -409,6 +409,18 @@
       "documentacao": "completa",
       "publicado": true,
       "atualizado_em": "2026-11-14"
+    },
+    {
+      "id": "lembrete-departamentos-guias",
+      "nome": "Lembrete mensal de guias não visualizadas",
+      "repositorio": "https://github.com/evolvi-solucoes/lembrete-departamentos-guias",
+      "resumo": "Lembra os departamentos, todo dia 28, de conferir no Nibo as guias de pagamento que o cliente não visualizou.",
+      "area": "Gestão",
+      "situacao": "producao",
+      "execucao": "A definir",
+      "documentacao": "completa",
+      "publicado": true,
+      "atualizado_em": "2026-11-14"
     }
   ]
 }
