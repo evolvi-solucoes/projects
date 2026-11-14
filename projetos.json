@@ -385,6 +385,18 @@
       "documentacao": "completa",
       "publicado": true,
       "atualizado_em": "2026-11-14"
+    },
+    {
+      "id": "tarefa-certificado",
+      "nome": "Tarefa de renovação de certificado",
+      "repositorio": "https://github.com/evolvi-solucoes/tarefa-certificado",
+      "resumo": "Cria, 20 dias antes do vencimento, a tarefa de contatar o cliente para emitir um novo certificado digital. O Sucesso do Cliente age antes do vencimento.",
+      "area": "Sucesso do Cliente",
+      "situacao": "producao",
+      "execucao": "A definir",
+      "documentacao": "completa",
+      "publicado": true,
+      "atualizado_em": "2026-11-14"
     }
   ]
 }
