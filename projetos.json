@@ -337,6 +337,18 @@
       "documentacao": "completa",
       "publicado": true,
       "atualizado_em": "2026-11-14"
+    },
+    {
+      "id": "fluxo-avisos-reinf-fator-r",
+      "nome": "Avisos de REINF/MIT/DCTFWeb e Fator R",
+      "repositorio": "https://github.com/evolvi-solucoes/fluxo-avisos-reinf-fator-r",
+      "resumo": "Avisa no Slack o próximo responsável quando um departamento conclui a etapa e quando chega um cliente novo. No fim do mês, lembra quem ainda não concluiu.",
+      "area": "Integração",
+      "situacao": "producao",
+      "execucao": "A definir",
+      "documentacao": "completa",
+      "publicado": true,
+      "atualizado_em": "2026-11-14"
     }
   ]
 }
