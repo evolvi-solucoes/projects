@@ -27,6 +27,7 @@ Este arquivo segue o formato Keep a Changelog e o versionamento semântico (SemV
 - Testes de borda de situação e de datas.
 
 ### Changed
+- Datas de última mudança de `guias-whatsapp` e `evolvi-cronus`: a documentação ganhou o cenário Make atual.
 - A skill `portfolio-sistemas` passou a se chamar `projeto`.
 - O portfólio mostra os projetos desde o início, e não só as automações em produção.
 - A contagem da página diz "projetos" em vez de "automações".
