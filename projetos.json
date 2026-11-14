@@ -325,6 +325,18 @@
       "documentacao": "completa",
       "publicado": true,
       "atualizado_em": "2026-11-14"
+    },
+    {
+      "id": "encaminhamento-veloxdp",
+      "nome": "Encaminhamento de e-mails do Velox",
+      "repositorio": "https://github.com/evolvi-solucoes/encaminhamento-veloxdp",
+      "resumo": "Recebe os e-mails do Velox e os encaminha ao responsável do DP de cada empresa. O aviso chega a quem cuida da empresa, sem triagem manual.",
+      "area": "Departamento Pessoal",
+      "situacao": "producao",
+      "execucao": "A definir",
+      "documentacao": "completa",
+      "publicado": true,
+      "atualizado_em": "2026-11-14"
     }
   ]
 }
