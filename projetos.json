@@ -313,6 +313,18 @@
       "publicado": true,
       "iniciado_em": "2026-11-14",
       "atualizado_em": "2026-11-14"
+    },
+    {
+      "id": "evolvi-obli-clavis",
+      "nome": "Assistente Conpluszete",
+      "repositorio": "https://github.com/evolvi-solucoes/evolvi-obli-clavis",
+      "resumo": "Assistente da equipe no Slack que responde dúvidas e atualiza tarefas no Notion. Também envia as guias por WhatsApp e registra quando o cliente abre o link.",
+      "area": "Integração",
+      "situacao": "andamento",
+      "execucao": "A definir",
+      "documentacao": "completa",
+      "publicado": true,
+      "atualizado_em": "2026-11-14"
     }
   ]
 }
