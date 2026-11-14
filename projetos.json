@@ -373,6 +373,18 @@
       "documentacao": "completa",
       "publicado": true,
       "atualizado_em": "2026-11-14"
+    },
+    {
+      "id": "encaminhamento-respostas-nibo",
+      "nome": "Encaminhamento de respostas do Nibo",
+      "repositorio": "https://github.com/evolvi-solucoes/encaminhamento-respostas-nibo",
+      "resumo": "Reenvia ao colaborador que enviou o e-mail pelo Nibo a resposta do cliente. A resposta chega a quem precisa dela, sem ficar numa caixa única.",
+      "area": "Integração",
+      "situacao": "producao",
+      "execucao": "A definir",
+      "documentacao": "completa",
+      "publicado": true,
+      "atualizado_em": "2026-11-14"
     }
   ]
 }
