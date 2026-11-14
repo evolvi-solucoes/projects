@@ -361,6 +361,18 @@
       "documentacao": "completa",
       "publicado": true,
       "atualizado_em": "2026-11-14"
+    },
+    {
+      "id": "avisos-aniversarios-ferias",
+      "nome": "Avisos de aniversários e férias",
+      "repositorio": "https://github.com/evolvi-solucoes/avisos-aniversarios-ferias",
+      "resumo": "Avisa no Slack, todo dia 25, os aniversários do mês seguinte e as férias da equipe. Só a direção vê as férias.",
+      "area": "Gestão",
+      "situacao": "producao",
+      "execucao": "A definir",
+      "documentacao": "completa",
+      "publicado": true,
+      "atualizado_em": "2026-11-14"
     }
   ]
 }
