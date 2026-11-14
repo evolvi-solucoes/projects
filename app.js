@@ -17,11 +17,21 @@ const DOCUMENTOS = [
   ["ADRs", "docs/adr"],
 ];
 
-const estado = { busca: "", area: "Todas", situacao: "Todas" };
+const estado = { busca: "", area: "Todas", situacao: "Todas", hosts: new Set() };
 let projetos = [];
 let areas = [];
 
 const EXECUCOES = ["Serviço", "Tarefa agendada", "Manual", "A definir"];
+
+// Onde a automação roda. O ícone é o arquivo assets/hosts/<chave>.svg.
+const HOSTS = {
+  make: "Make",
+  notion: "Notion",
+  cloudflare: "Cloudflare",
+  servidor: "Servidor",
+  supabase: "Supabase",
+  local: "Local",
+};
 
 const ROTULO_SITUACAO = {
   andamento: "Em andamento",
@@ -61,8 +71,29 @@ function projetoValido(projeto) {
     && Object.hasOwn(ROTULO_DOCUMENTACAO, projeto.documentacao)
     && Object.hasOwn(ROTULO_SITUACAO, projeto.situacao)
     && typeof projeto.publicado === "boolean"
+    && hostsValidos(projeto.roda_em)
+    && horasValidas(projeto.horas_mes)
     && dataValida(projeto.iniciado_em)
     && dataValida(projeto.atualizado_em);
+}
+
+// Opcionais: uma chave de host fora de HOSTS não teria ícone nem filtro.
+function hostsValidos(valor) {
+  return valor === undefined
+    || (Array.isArray(valor) && valor.every((h) => Object.hasOwn(HOSTS, h)));
+}
+
+// Horas economizadas por mês; null significa "ainda não medido".
+function horasValidas(valor) {
+  return valor === undefined || valor === null
+    || (typeof valor === "number" && Number.isFinite(valor) && valor >= 0);
+}
+
+function criarIconeHost(chave) {
+  const icone = criar("span", `host-icone host-${chave}`);
+  icone.style.setProperty("--icone", `url("assets/hosts/${chave}.svg")`);
+  icone.setAttribute("aria-hidden", "true");
+  return icone;
 }
 
 function normalizar(texto) {
@@ -105,6 +136,18 @@ function criarCartao(projeto) {
 
   item.append(titulo, endereco, resumo, selos);
 
+  const hosts = projeto.roda_em ?? [];
+  if (hosts.length) {
+    const roda = criar("p", "roda-em");
+    roda.append(criar("span", "roda-em-rotulo", "Roda em"));
+    for (const chave of hosts) {
+      const host = criar("span", "host");
+      host.append(criarIconeHost(chave), criar("span", null, HOSTS[chave]));
+      roda.append(host);
+    }
+    item.append(roda);
+  }
+
   const datas = [];
   if (projeto.iniciado_em) datas.push(`Iniciado em ${formatarData(projeto.iniciado_em)}`);
   if (projeto.atualizado_em) datas.push(`Atualizado em ${formatarData(projeto.atualizado_em)}`);
@@ -132,7 +175,9 @@ function filtrar() {
     const naArea = estado.area === "Todas" || projeto.area === estado.area;
     const naSituacao = estado.situacao === "Todas" || projeto.situacao === estado.situacao;
     const texto = normalizar(`${projeto.nome} ${projeto.resumo}`);
-    return naArea && naSituacao && palavras.every((palavra) => texto.includes(palavra));
+    const noHost = estado.hosts.size === 0
+      || (projeto.roda_em ?? []).some((h) => estado.hosts.has(h));
+    return naArea && naSituacao && noHost && palavras.every((palavra) => texto.includes(palavra));
   });
 }
 
@@ -143,6 +188,14 @@ function desenharLista() {
   document.getElementById("vazio").hidden = visiveis.length > 0;
   document.getElementById("contagem").textContent =
     `${visiveis.length} de ${projetos.length} projetos`;
+}
+
+// Soma só o que foi medido; sem nenhum valor no JSON mostra "—".
+function formatarHoras(lista) {
+  const medidos = lista.map((p) => p.horas_mes).filter((h) => typeof h === "number");
+  if (!medidos.length) return "—";
+  const total = medidos.reduce((a, b) => a + b, 0);
+  return `${total.toLocaleString("pt-BR", { maximumFractionDigits: 1 })} h`;
 }
 
 // Números do portfólio inteiro, não da busca: não mudam ao filtrar.
@@ -156,6 +209,7 @@ function desenharEstatisticas() {
     [emProducao, "em produção"],
     [`${pct}%`, "com documentação completa"],
     [areas.length, "áreas atendidas"],
+    [formatarHoras(projetos), "economizadas por mês"],
   ];
   document.getElementById("estatisticas").replaceChildren(...itens.map(([valor, rotulo]) => {
     const bloco = criar("div", "estatistica");
@@ -166,41 +220,122 @@ function desenharEstatisticas() {
   }));
 }
 
-function desenharAreas() {
-  const grupo = document.getElementById("areas");
-  const botoes = ["Todas", ...areas].map((area) => {
-    const botao = criar("button", "area", area);
-    botao.type = "button";
-    botao.setAttribute("aria-pressed", String(area === estado.area));
-    botao.addEventListener("click", () => {
-      estado.area = area;
-      desenharAreas();
-      desenharLista();
-    });
-    return botao;
-  });
-  grupo.replaceChildren(...botoes);
+// Pill com lista suspensa. Em modo múltiplo (hosts) as opções são caixas
+// de seleção e a lista fica aberta; no simples, escolher fecha a lista.
+let pillAberta = null;
+
+function fecharPills() {
+  if (!pillAberta) return;
+  pillAberta.classList.remove("aberta");
+  pillAberta.querySelector(".pill").setAttribute("aria-expanded", "false");
+  pillAberta = null;
 }
 
-// Só mostra botões das situações que existem na lista, para não oferecer
-// um filtro que sempre devolve zero projetos.
-function desenharSituacoes() {
-  const grupo = document.getElementById("situacoes");
-  const presentes = Object.keys(ROTULO_SITUACAO)
-    .filter((chave) => projetos.some((p) => p.situacao === chave));
-  const botoes = ["Todas", ...presentes].map((chave) => {
-    const rotulo = chave === "Todas" ? "Todas as situações" : ROTULO_SITUACAO[chave];
-    const botao = criar("button", "area", rotulo);
-    botao.type = "button";
-    botao.setAttribute("aria-pressed", String(chave === estado.situacao));
-    botao.addEventListener("click", () => {
-      estado.situacao = chave;
-      desenharSituacoes();
+function criarPill({ titulo, opcoes, multiplo, valorAtual, aoMudar }) {
+  const raiz = criar("div", "pill-raiz");
+  const botao = criar("button", "pill");
+  botao.type = "button";
+  botao.setAttribute("aria-haspopup", "listbox");
+  botao.setAttribute("aria-expanded", "false");
+
+  const rotuloAtual = () => {
+    const sel = multiplo ? [...valorAtual()] : valorAtual() === "Todas" ? [] : [valorAtual()];
+    if (!sel.length) return null;
+    const nomes = sel.map((v) => opcoes.find((o) => o.valor === v)?.rotulo ?? v);
+    return nomes.length > 2 ? `${nomes.length} selecionados` : nomes.join(", ");
+  };
+
+  const lista = criar("ul", "pill-lista");
+  lista.setAttribute("role", "listbox");
+  lista.setAttribute("aria-label", titulo);
+  if (multiplo) lista.setAttribute("aria-multiselectable", "true");
+
+  const atualizar = () => {
+    const atual = rotuloAtual();
+    botao.replaceChildren(criar("span", "pill-titulo", titulo));
+    if (atual) botao.append(criar("span", "pill-valor", atual));
+    botao.append(criar("span", "pill-seta"));
+    botao.classList.toggle("ativa", Boolean(atual));
+    for (const li of lista.children) {
+      const marcada = multiplo
+        ? valorAtual().has(li.dataset.valor)
+        : valorAtual() === li.dataset.valor;
+      li.setAttribute("aria-selected", String(marcada));
+    }
+  };
+
+  for (const opcao of opcoes) {
+    const li = criar("li", "pill-opcao");
+    li.setAttribute("role", "option");
+    li.tabIndex = 0;
+    li.dataset.valor = opcao.valor;
+    li.append(criar("span", "pill-marca"));
+    if (opcao.icone) li.append(criarIconeHost(opcao.icone));
+    li.append(criar("span", null, opcao.rotulo));
+    const escolher = () => {
+      aoMudar(opcao.valor);
+      atualizar();
       desenharLista();
+      if (!multiplo) { fecharPills(); botao.focus(); }
+    };
+    li.addEventListener("click", escolher);
+    li.addEventListener("keydown", (e) => {
+      if (e.key === "Enter" || e.key === " ") { e.preventDefault(); escolher(); }
     });
-    return botao;
+    lista.append(li);
+  }
+
+  botao.addEventListener("click", (e) => {
+    e.stopPropagation();
+    const abrir = pillAberta !== raiz;
+    fecharPills();
+    if (abrir) {
+      raiz.classList.add("aberta");
+      botao.setAttribute("aria-expanded", "true");
+      pillAberta = raiz;
+    }
   });
-  grupo.replaceChildren(...botoes);
+  lista.addEventListener("click", (e) => e.stopPropagation());
+
+  raiz.append(botao, lista);
+  atualizar();
+  return raiz;
+}
+
+document.addEventListener("click", fecharPills);
+document.addEventListener("keydown", (e) => { if (e.key === "Escape") fecharPills(); });
+
+function desenharPills() {
+  const situacoes = Object.keys(ROTULO_SITUACAO)
+    .filter((chave) => projetos.some((p) => p.situacao === chave));
+  const hostsUsados = Object.keys(HOSTS)
+    .filter((chave) => projetos.some((p) => (p.roda_em ?? []).includes(chave)));
+
+  document.getElementById("pills").replaceChildren(
+    criarPill({
+      titulo: "Situação",
+      opcoes: [{ valor: "Todas", rotulo: "Todas" },
+        ...situacoes.map((c) => ({ valor: c, rotulo: ROTULO_SITUACAO[c] }))],
+      valorAtual: () => estado.situacao,
+      aoMudar: (v) => { estado.situacao = v; },
+    }),
+    criarPill({
+      titulo: "Área",
+      opcoes: [{ valor: "Todas", rotulo: "Todas" },
+        ...areas.map((a) => ({ valor: a, rotulo: a }))],
+      valorAtual: () => estado.area,
+      aoMudar: (v) => { estado.area = v; },
+    }),
+    criarPill({
+      titulo: "Roda em",
+      multiplo: true,
+      opcoes: hostsUsados.map((c) => ({ valor: c, rotulo: HOSTS[c], icone: c })),
+      valorAtual: () => estado.hosts,
+      aoMudar: (v) => {
+        if (estado.hosts.has(v)) estado.hosts.delete(v); else estado.hosts.add(v);
+      },
+    }),
+  );
 }
 
 function ordenar(lista, ordemAreas) {
@@ -248,8 +383,7 @@ async function iniciar() {
     }
 
     desenharEstatisticas();
-    desenharSituacoes();
-    desenharAreas();
+    desenharPills();
     desenharLista();
   } catch (erro) {
     console.error(erro);
