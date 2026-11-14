@@ -5,6 +5,16 @@ Este arquivo segue o formato Keep a Changelog e o versionamento semântico (SemV
 ## [Unreleased]
 
 ### Added
+- Projeto `lembrete-departamentos-guias` (Lembrete mensal de guias não visualizadas) em produção, com documentação completa.
+- Projeto `tarefa-aniversario-clientes` (Tarefa de aniversário de clientes) em produção, com documentação completa.
+- Projeto `tarefa-certificado` (Tarefa de renovação de certificado) em produção, com documentação completa.
+- Projeto `encaminhamento-respostas-nibo` (Encaminhamento de respostas do Nibo) em produção, com documentação completa.
+- Projeto `avisos-aniversarios-ferias` (Avisos de aniversários e férias) em produção, com documentação completa.
+- Projeto `lembrete-tarefas-notion` (Lembrete de tarefas do Notion) em produção, com documentação completa.
+- Projeto `fluxo-avisos-reinf-fator-r` (Avisos de REINF/MIT/DCTFWeb e Fator R) em produção, com documentação completa.
+- Projeto `encaminhamento-veloxdp` (Encaminhamento de e-mails do Velox) em produção, com documentação completa.
+- Projeto `evolvi-obli-clavis` (Assistente Conpluszete) em andamento, com documentação completa.
+- Área `Sucesso do Cliente` na lista de áreas.
 - Projeto `backup-reinf` (Backup mensal do REINF/MIT/DCTFWeb) em produção, com documentação completa.
 - Projeto `backup-fator-r` (Backup mensal do Fator R) em produção, com documentação completa.
 - Projeto `evolvi-cronus` (Cronus, controle de tempo por cliente) em andamento, com documentação completa.
