@@ -338,13 +338,8 @@ function desenharPills() {
   );
 }
 
-function ordenar(lista, ordemAreas) {
-  const posicao = (area) => {
-    const indice = ordemAreas.indexOf(area);
-    return indice === -1 ? ordemAreas.length : indice;
-  };
-  return lista.sort((a, b) =>
-    posicao(a.area) - posicao(b.area) || a.nome.localeCompare(b.nome, "pt-BR"));
+function ordenar(lista) {
+  return lista.sort((a, b) => a.nome.localeCompare(b.nome, "pt-BR"));
 }
 
 async function iniciar() {
@@ -375,7 +370,7 @@ async function iniciar() {
     // sem isso o projeto só aparece em "Todas".
     const areasDosProjetos = unicos.map((p) => p.area);
     areas = [...new Set([...(dados.areas ?? []), ...areasDosProjetos])];
-    projetos = ordenar(unicos, areas);
+    projetos = ordenar(unicos);
 
     if (dados.atualizado_em) {
       const [ano, mes, dia] = dados.atualizado_em.split("-");
