@@ -397,6 +397,18 @@
       "documentacao": "completa",
       "publicado": true,
       "atualizado_em": "2026-11-14"
+    },
+    {
+      "id": "tarefa-aniversario-clientes",
+      "nome": "Tarefa de aniversário de clientes",
+      "repositorio": "https://github.com/evolvi-solucoes/tarefa-aniversario-clientes",
+      "resumo": "Cria, na véspera, a tarefa de enviar parabéns aos contatos de clientes que fazem aniversário. O Sucesso do Cliente não perde a data.",
+      "area": "Sucesso do Cliente",
+      "situacao": "producao",
+      "execucao": "A definir",
+      "documentacao": "completa",
+      "publicado": true,
+      "atualizado_em": "2026-11-14"
     }
   ]
 }
