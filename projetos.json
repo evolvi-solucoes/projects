@@ -11,6 +11,8 @@
       "area": "Financeiro",
       "situacao": "producao",
       "execucao": "Tarefa agendada",
+      "roda_em": ["servidor"],
+      "horas_mes": null,
       "documentacao": "completa",
       "publicado": false
     },
@@ -22,6 +24,8 @@
       "area": "Fiscal",
       "situacao": "producao",
       "execucao": "Serviço",
+      "roda_em": ["servidor"],
+      "horas_mes": null,
       "documentacao": "completa",
       "publicado": false
     },
@@ -33,6 +37,8 @@
       "area": "Infraestrutura",
       "situacao": "producao",
       "execucao": "Serviço",
+      "roda_em": ["servidor"],
+      "horas_mes": null,
       "documentacao": "parcial",
       "publicado": false
     },
@@ -44,6 +50,8 @@
       "area": "Financeiro",
       "situacao": "producao",
       "execucao": "Serviço",
+      "roda_em": ["servidor"],
+      "horas_mes": null,
       "documentacao": "parcial",
       "publicado": true
     },
@@ -55,6 +63,8 @@
       "area": "Departamento Pessoal",
       "situacao": "producao",
       "execucao": "Tarefa agendada",
+      "roda_em": ["servidor"],
+      "horas_mes": null,
       "documentacao": "pendente",
       "publicado": true
     },
@@ -66,6 +76,8 @@
       "area": "Departamento Pessoal",
       "situacao": "producao",
       "execucao": "Serviço",
+      "roda_em": ["servidor"],
+      "horas_mes": null,
       "documentacao": "pendente",
       "publicado": false
     },
@@ -77,6 +89,8 @@
       "area": "Departamento Pessoal",
       "situacao": "producao",
       "execucao": "Serviço",
+      "roda_em": ["servidor"],
+      "horas_mes": null,
       "documentacao": "pendente",
       "publicado": false
     },
@@ -88,6 +102,8 @@
       "area": "Departamento Pessoal",
       "situacao": "producao",
       "execucao": "Serviço",
+      "roda_em": ["servidor"],
+      "horas_mes": null,
       "documentacao": "completa",
       "publicado": false
     },
@@ -99,6 +115,8 @@
       "area": "Departamento Pessoal",
       "situacao": "producao",
       "execucao": "Tarefa agendada",
+      "roda_em": ["servidor"],
+      "horas_mes": null,
       "documentacao": "pendente",
       "publicado": false
     },
@@ -110,6 +128,8 @@
       "area": "Fiscal",
       "situacao": "producao",
       "execucao": "Serviço",
+      "roda_em": ["servidor"],
+      "horas_mes": null,
       "documentacao": "pendente",
       "publicado": false
     },
@@ -121,6 +141,8 @@
       "area": "Fiscal",
       "situacao": "producao",
       "execucao": "Serviço",
+      "roda_em": ["servidor"],
+      "horas_mes": null,
       "documentacao": "pendente",
       "publicado": false
     },
@@ -132,6 +154,8 @@
       "area": "Integração",
       "situacao": "producao",
       "execucao": "Serviço",
+      "roda_em": ["servidor"],
+      "horas_mes": null,
       "documentacao": "pendente",
       "publicado": false
     },
@@ -143,6 +167,8 @@
       "area": "Integração",
       "situacao": "producao",
       "execucao": "Serviço",
+      "roda_em": ["servidor"],
+      "horas_mes": null,
       "documentacao": "parcial",
       "publicado": false
     },
@@ -154,6 +180,8 @@
       "area": "Integração",
       "situacao": "producao",
       "execucao": "Serviço",
+      "roda_em": ["servidor"],
+      "horas_mes": null,
       "documentacao": "parcial",
       "publicado": true
     },
@@ -165,6 +193,8 @@
       "area": "Infraestrutura",
       "situacao": "producao",
       "execucao": "Tarefa agendada",
+      "roda_em": ["servidor"],
+      "horas_mes": null,
       "documentacao": "pendente",
       "publicado": false
     },
@@ -176,6 +206,8 @@
       "area": "Infraestrutura",
       "situacao": "producao",
       "execucao": "Serviço",
+      "roda_em": ["servidor"],
+      "horas_mes": null,
       "documentacao": "pendente",
       "publicado": false
     },
@@ -187,6 +219,8 @@
       "area": "Departamento Pessoal",
       "situacao": "producao",
       "execucao": "Tarefa agendada",
+      "roda_em": ["cloudflare"],
+      "horas_mes": null,
       "documentacao": "completa",
       "publicado": true,
       "atualizado_em": "2026-11-12"
@@ -199,6 +233,8 @@
       "area": "Departamento Pessoal",
       "situacao": "producao",
       "execucao": "Tarefa agendada",
+      "roda_em": ["servidor", "cloudflare"],
+      "horas_mes": null,
       "documentacao": "completa",
       "publicado": true,
       "atualizado_em": "2026-11-12"
@@ -211,6 +247,8 @@
       "area": "Integração",
       "situacao": "andamento",
       "execucao": "A definir",
+      "roda_em": ["make", "cloudflare"],
+      "horas_mes": null,
       "documentacao": "completa",
       "publicado": true,
       "atualizado_em": "2026-11-14"
@@ -223,6 +261,8 @@
       "area": "Integração",
       "situacao": "producao",
       "execucao": "A definir",
+      "roda_em": ["cloudflare"],
+      "horas_mes": null,
       "documentacao": "completa",
       "publicado": true,
       "atualizado_em": "2026-11-12"
@@ -235,6 +275,8 @@
       "area": "Integração",
       "situacao": "producao",
       "execucao": "A definir",
+      "roda_em": ["cloudflare"],
+      "horas_mes": null,
       "documentacao": "completa",
       "publicado": true,
       "atualizado_em": "2026-11-12"
@@ -247,6 +289,8 @@
       "area": "Integração",
       "situacao": "producao",
       "execucao": "A definir",
+      "roda_em": ["cloudflare"],
+      "horas_mes": null,
       "documentacao": "completa",
       "publicado": true,
       "atualizado_em": "2026-11-12"
@@ -259,6 +303,8 @@
       "area": "Financeiro",
       "situacao": "producao",
       "execucao": "Serviço",
+      "roda_em": ["cloudflare"],
+      "horas_mes": null,
       "documentacao": "completa",
       "publicado": true,
       "iniciado_em": "2026-10-27",
@@ -272,6 +318,8 @@
       "area": "Fiscal",
       "situacao": "producao",
       "execucao": "Manual",
+      "roda_em": ["cloudflare"],
+      "horas_mes": null,
       "documentacao": "completa",
       "publicado": true,
       "atualizado_em": "2026-11-13"
@@ -284,6 +332,8 @@
       "area": "Gestão",
       "situacao": "andamento",
       "execucao": "A definir",
+      "roda_em": ["cloudflare", "supabase", "local"],
+      "horas_mes": null,
       "documentacao": "completa",
       "publicado": true,
       "atualizado_em": "2026-11-14"
@@ -296,6 +346,8 @@
       "area": "Infraestrutura",
       "situacao": "producao",
       "execucao": "A definir",
+      "roda_em": ["make"],
+      "horas_mes": null,
       "documentacao": "completa",
       "publicado": true,
       "iniciado_em": "2026-11-14",
@@ -309,6 +361,8 @@
       "area": "Infraestrutura",
       "situacao": "producao",
       "execucao": "A definir",
+      "roda_em": ["make"],
+      "horas_mes": null,
       "documentacao": "completa",
       "publicado": true,
       "iniciado_em": "2026-11-14",
@@ -322,6 +376,8 @@
       "area": "Integração",
       "situacao": "andamento",
       "execucao": "A definir",
+      "roda_em": ["make"],
+      "horas_mes": null,
       "documentacao": "completa",
       "publicado": true,
       "atualizado_em": "2026-11-14"
@@ -334,6 +390,8 @@
       "area": "Departamento Pessoal",
       "situacao": "producao",
       "execucao": "A definir",
+      "roda_em": ["make"],
+      "horas_mes": null,
       "documentacao": "completa",
       "publicado": true,
       "atualizado_em": "2026-11-14"
@@ -346,6 +404,8 @@
       "area": "Integração",
       "situacao": "producao",
       "execucao": "A definir",
+      "roda_em": ["make"],
+      "horas_mes": null,
       "documentacao": "completa",
       "publicado": true,
       "atualizado_em": "2026-11-14"
@@ -358,6 +418,8 @@
       "area": "Integração",
       "situacao": "producao",
       "execucao": "A definir",
+      "roda_em": ["make"],
+      "horas_mes": null,
       "documentacao": "completa",
       "publicado": true,
       "atualizado_em": "2026-11-14"
@@ -370,6 +432,8 @@
       "area": "Gestão",
       "situacao": "producao",
       "execucao": "A definir",
+      "roda_em": ["make"],
+      "horas_mes": null,
       "documentacao": "completa",
       "publicado": true,
       "atualizado_em": "2026-11-14"
@@ -382,6 +446,8 @@
       "area": "Integração",
       "situacao": "producao",
       "execucao": "A definir",
+      "roda_em": ["make"],
+      "horas_mes": null,
       "documentacao": "completa",
       "publicado": true,
       "atualizado_em": "2026-11-14"
@@ -394,6 +460,8 @@
       "area": "Sucesso do Cliente",
       "situacao": "producao",
       "execucao": "A definir",
+      "roda_em": ["make", "notion"],
+      "horas_mes": null,
       "documentacao": "completa",
       "publicado": true,
       "atualizado_em": "2026-11-14"
@@ -406,6 +474,8 @@
       "area": "Sucesso do Cliente",
       "situacao": "producao",
       "execucao": "A definir",
+      "roda_em": ["make"],
+      "horas_mes": null,
       "documentacao": "completa",
       "publicado": true,
       "atualizado_em": "2026-11-14"
@@ -418,6 +488,8 @@
       "area": "Gestão",
       "situacao": "producao",
       "execucao": "A definir",
+      "roda_em": ["make"],
+      "horas_mes": null,
       "documentacao": "completa",
       "publicado": true,
       "atualizado_em": "2026-11-14"
@@ -430,6 +502,8 @@
       "area": "Contábil",
       "situacao": "producao",
       "execucao": "A definir",
+      "roda_em": ["make"],
+      "horas_mes": null,
       "documentacao": "completa",
       "publicado": true,
       "atualizado_em": "2026-11-14"
@@ -442,6 +516,8 @@
       "area": "Sucesso do Cliente",
       "situacao": "producao",
       "execucao": "A definir",
+      "roda_em": ["notion", "make"],
+      "horas_mes": null,
       "documentacao": "completa",
       "publicado": true,
       "atualizado_em": "2026-11-14"

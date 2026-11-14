@@ -48,6 +48,8 @@ A página não usa variáveis de ambiente nem segredos.
 | `execucao` | Sim | `Serviço`, `Tarefa agendada`, `Manual` ou `A definir`. |
 | `documentacao` | Sim | `completa`, `parcial` ou `pendente`. |
 | `publicado` | Sim | `true` quando o repositório já existe no GitHub. |
+| `roda_em` | Não | Lista de onde roda: `make`, `notion`, `cloudflare`, `servidor`, `supabase` ou `local`. Aceita mais de um. |
+| `horas_mes` | Não | Horas economizadas por mês (número) ou `null` se ainda não medido. A faixa de números soma os valores. |
 | `iniciado_em` | Não | Data de início do projeto, no formato `AAAA-MM-DD`. |
 | `atualizado_em` | Não | Data da última mudança do projeto, no formato `AAAA-MM-DD`. |
 
