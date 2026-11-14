@@ -300,6 +300,19 @@
       "publicado": true,
       "iniciado_em": "2026-11-14",
       "atualizado_em": "2026-11-14"
+    },
+    {
+      "id": "backup-reinf",
+      "nome": "Backup mensal do REINF/MIT/DCTFWeb",
+      "repositorio": "https://github.com/evolvi-solucoes/backup-reinf",
+      "resumo": "Guarda todo mês uma planilha com as retenções e os tributos de cada empresa. A equipe mantém a cópia do que foi entregue, mesmo que os dados mudem.",
+      "area": "Infraestrutura",
+      "situacao": "producao",
+      "execucao": "A definir",
+      "documentacao": "completa",
+      "publicado": true,
+      "iniciado_em": "2026-11-14",
+      "atualizado_em": "2026-11-14"
     }
   ]
 }
