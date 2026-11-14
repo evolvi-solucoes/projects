@@ -433,6 +433,18 @@
       "documentacao": "completa",
       "publicado": true,
       "atualizado_em": "2026-11-14"
+    },
+    {
+      "id": "onboarding-clientes",
+      "nome": "Onboarding de clientes",
+      "repositorio": "https://github.com/evolvi-solucoes/onboarding-clientes",
+      "resumo": "Orquestra o onboarding de um cliente novo entre as áreas. Cria as tarefas de cada área e avisa quem deve agir.",
+      "area": "Sucesso do Cliente",
+      "situacao": "producao",
+      "execucao": "A definir",
+      "documentacao": "completa",
+      "publicado": true,
+      "atualizado_em": "2026-11-14"
     }
   ]
 }
