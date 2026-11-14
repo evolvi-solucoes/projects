@@ -5,6 +5,8 @@ Este arquivo segue o formato Keep a Changelog e o versionamento semântico (SemV
 ## [Unreleased]
 
 ### Added
+- Projeto `backup-reinf` (Backup mensal do REINF/MIT/DCTFWeb) em produção, com documentação completa.
+- Projeto `backup-fator-r` (Backup mensal do Fator R) em produção, com documentação completa.
 - Projeto `evolvi-cronus` (Cronus, controle de tempo por cliente) em andamento, com documentação completa.
 - Área `Gestão` na lista de áreas.
 - Projeto `sublimite-sn-cpf` (Sublimite SN por sócio) em produção, com documentação completa.
