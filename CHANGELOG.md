@@ -5,6 +5,9 @@ Este arquivo segue o formato Keep a Changelog e o versionamento semântico (SemV
 ## [Unreleased]
 
 ### Added
+- Projeto `onboarding-clientes` (Onboarding de clientes) em produção, com documentação completa.
+- Projeto `notificacoes-balancete` (Notificações Balancete) em produção, com documentação completa.
+- Área `Contábil` na lista de áreas.
 - Projeto `lembrete-departamentos-guias` (Lembrete mensal de guias não visualizadas) em produção, com documentação completa.
 - Projeto `tarefa-aniversario-clientes` (Tarefa de aniversário de clientes) em produção, com documentação completa.
 - Projeto `tarefa-certificado` (Tarefa de renovação de certificado) em produção, com documentação completa.
