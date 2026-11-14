@@ -349,6 +349,18 @@
       "documentacao": "completa",
       "publicado": true,
       "atualizado_em": "2026-11-14"
+    },
+    {
+      "id": "lembrete-tarefas-notion",
+      "nome": "Lembrete de tarefas (Notion)",
+      "repositorio": "https://github.com/evolvi-solucoes/lembrete-tarefas-notion",
+      "resumo": "Avisa cada responsável, por mensagem direta no Slack, das tarefas vencidas ou com prazo no dia. Roda nos dias úteis, sem cobrança manual.",
+      "area": "Integração",
+      "situacao": "producao",
+      "execucao": "A definir",
+      "documentacao": "completa",
+      "publicado": true,
+      "atualizado_em": "2026-11-14"
     }
   ]
 }
