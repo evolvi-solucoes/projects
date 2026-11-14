@@ -1,7 +1,7 @@
 {
   "organizacao": "evolvi-solucoes",
   "atualizado_em": "2026-11-14",
-  "areas": ["Financeiro", "Fiscal", "Departamento Pessoal", "Integração", "Infraestrutura", "Gestão"],
+  "areas": ["Financeiro", "Fiscal", "Departamento Pessoal", "Integração", "Infraestrutura", "Gestão", "Sucesso do Cliente"],
   "projetos": [
     {
       "id": "marcar-pagos-nibo",
