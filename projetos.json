@@ -421,6 +421,18 @@
       "documentacao": "completa",
       "publicado": true,
       "atualizado_em": "2026-11-14"
+    },
+    {
+      "id": "notificacoes-balancete",
+      "nome": "Notificações Balancete",
+      "repositorio": "https://github.com/evolvi-solucoes/notificacoes-balancete",
+      "resumo": "Centraliza num só lugar os balancetes enviados à coordenação contábil para análise. Avisa no Slack a pessoa certa a cada mudança de situação.",
+      "area": "Contábil",
+      "situacao": "producao",
+      "execucao": "A definir",
+      "documentacao": "completa",
+      "publicado": true,
+      "atualizado_em": "2026-11-14"
     }
   ]
 }
