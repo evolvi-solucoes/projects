@@ -1,6 +1,6 @@
 {
   "organizacao": "evolvi-solucoes",
-  "atualizado_em": "2026-11-14",
+  "atualizado_em": "2026-11-15",
   "areas": ["Financeiro", "Fiscal", "Departamento Pessoal", "Integração", "Infraestrutura", "Gestão", "Sucesso do Cliente", "Contábil"],
   "projetos": [
     {
@@ -521,6 +521,21 @@
       "documentacao": "completa",
       "publicado": true,
       "atualizado_em": "2026-11-14"
+    },
+    {
+      "id": "rotina-workers-cloudflare",
+      "nome": "Rotina Workers Cloudflare",
+      "repositorio": "https://github.com/evolvi-solucoes/rotina-workers-cloudflare",
+      "resumo": "Detecta falhas nos serviços automáticos da empresa e as corrige com segurança, com aprovação humana antes de ir ao ar. Roda no Claude e economiza 660 minutos por mês.",
+      "area": "Infraestrutura",
+      "situacao": "producao",
+      "execucao": "Tarefa agendada",
+      "roda_em": ["claude"],
+      "minutos_mes": 660,
+      "documentacao": "completa",
+      "publicado": true,
+      "iniciado_em": "2026-11-10",
+      "atualizado_em": "2026-11-15"
     }
   ]
 }
