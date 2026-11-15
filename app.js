@@ -72,7 +72,7 @@ function projetoValido(projeto) {
     && Object.hasOwn(ROTULO_SITUACAO, projeto.situacao)
     && typeof projeto.publicado === "boolean"
     && hostsValidos(projeto.roda_em)
-    && horasValidas(projeto.horas_mes)
+    && minutosValidos(projeto.minutos_mes)
     && dataValida(projeto.iniciado_em)
     && dataValida(projeto.atualizado_em);
 }
@@ -83,8 +83,8 @@ function hostsValidos(valor) {
     || (Array.isArray(valor) && valor.every((h) => Object.hasOwn(HOSTS, h)));
 }
 
-// Horas economizadas por mês; null significa "ainda não medido".
-function horasValidas(valor) {
+// Minutos economizados por mês; null significa "ainda não medido".
+function minutosValidos(valor) {
   return valor === undefined || valor === null
     || (typeof valor === "number" && Number.isFinite(valor) && valor >= 0);
 }
@@ -192,10 +192,10 @@ function desenharLista() {
 
 // Soma só o que foi medido; sem nenhum valor no JSON mostra "—".
 function formatarHoras(lista) {
-  const medidos = lista.map((p) => p.horas_mes).filter((h) => typeof h === "number");
+  const medidos = lista.map((p) => p.minutos_mes).filter((h) => typeof h === "number");
   if (!medidos.length) return "—";
-  const total = medidos.reduce((a, b) => a + b, 0);
-  return `${total.toLocaleString("pt-BR", { maximumFractionDigits: 1 })} h`;
+  const horas = medidos.reduce((a, b) => a + b, 0) / 60;
+  return `${horas.toLocaleString("pt-BR", { maximumFractionDigits: 1 })} h`;
 }
 
 // Números do portfólio inteiro, não da busca: não mudam ao filtrar.

@@ -6,7 +6,7 @@ Este arquivo segue o formato Keep a Changelog e o versionamento semântico (SemV
 
 ### Added
 - Filtros em pills com lista suspensa, e filtro `Roda em` com seleção múltipla e ícone de cada host (Make, Notion, Cloudflare, Servidor).
-- Campos `roda_em` e `horas_mes` em cada projeto, e o total de horas economizadas por mês na faixa de números.
+- Campos `roda_em` e `minutos_mes` em cada projeto, e o total de horas economizadas por mês na faixa de números.
 - Projeto `onboarding-clientes` (Onboarding de clientes) em produção, com documentação completa.
 - Projeto `notificacoes-balancete` (Notificações Balancete) em produção, com documentação completa.
 - Área `Contábil` na lista de áreas.
