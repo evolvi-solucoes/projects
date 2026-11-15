@@ -546,6 +546,7 @@ h1 {
 .host-make { background-color: #6d00cc; }
 .host-cloudflare { background-color: #f38020; }
 .host-supabase { background-color: #3ecf8e; }
+.host-claude { background-color: #d97757; }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) .host-make { background-color: #b57bff; }
 }

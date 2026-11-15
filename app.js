@@ -30,6 +30,7 @@ const HOSTS = {
   cloudflare: "Cloudflare",
   servidor: "Servidor",
   supabase: "Supabase",
+  claude: "Claude",
   local: "Local",
 };
 
