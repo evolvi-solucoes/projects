@@ -307,10 +307,14 @@ document.addEventListener("click", fecharPills);
 document.addEventListener("keydown", (e) => { if (e.key === "Escape") fecharPills(); });
 
 function desenharPills() {
+  const porRotulo = (rotulos) => (a, b) => rotulos[a].localeCompare(rotulos[b], "pt-BR");
   const situacoes = Object.keys(ROTULO_SITUACAO)
-    .filter((chave) => projetos.some((p) => p.situacao === chave));
+    .filter((chave) => projetos.some((p) => p.situacao === chave))
+    .sort(porRotulo(ROTULO_SITUACAO));
   const hostsUsados = Object.keys(HOSTS)
-    .filter((chave) => projetos.some((p) => (p.roda_em ?? []).includes(chave)));
+    .filter((chave) => projetos.some((p) => (p.roda_em ?? []).includes(chave)))
+    .sort(porRotulo(HOSTS));
+  const areasOrdenadas = [...areas].sort((a, b) => a.localeCompare(b, "pt-BR"));
 
   document.getElementById("pills").replaceChildren(
     criarPill({
@@ -323,7 +327,7 @@ function desenharPills() {
     criarPill({
       titulo: "Área",
       opcoes: [{ valor: "Todas", rotulo: "Todas" },
-        ...areas.map((a) => ({ valor: a, rotulo: a }))],
+        ...areasOrdenadas.map((a) => ({ valor: a, rotulo: a }))],
       valorAtual: () => estado.area,
       aoMudar: (v) => { estado.area = v; },
     }),
