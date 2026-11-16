@@ -5,6 +5,7 @@ Este arquivo segue o formato Keep a Changelog e o versionamento semântico (SemV
 ## [Unreleased]
 
 ### Added
+- Projeto `notion-questor-vidas` (Sincronização de Vidas) em produção, com documentação completa.
 - Projeto `rotina-workers-cloudflare` (Rotina Workers Cloudflare) em produção, com documentação completa.
 - Host `claude` no campo `roda_em`, com ícone do Claude.
 - Filtros em pills com lista suspensa, e filtro `Roda em` com seleção múltipla e ícone de cada host (Make, Notion, Cloudflare, Servidor).
