@@ -1,6 +1,6 @@
 {
   "organizacao": "evolvi-solucoes",
-  "atualizado_em": "2026-11-15",
+  "atualizado_em": "2026-11-16",
   "areas": ["Financeiro", "Fiscal", "Departamento Pessoal", "Integração", "Infraestrutura", "Gestão", "Sucesso do Cliente", "Contábil"],
   "projetos": [
     {
@@ -536,6 +536,21 @@
       "publicado": true,
       "iniciado_em": "2026-11-10",
       "atualizado_em": "2026-11-15"
+    },
+    {
+      "id": "notion-questor-vidas",
+      "nome": "Sincronização de Vidas (Questor)",
+      "repositorio": "https://github.com/evolvi-solucoes/notion-questor-vidas",
+      "resumo": "Atualiza todo dia o número de sócios e funcionários de cada empresa ativa. O DP, a gestão e o financeiro consultam o número de vidas sempre atualizado.",
+      "area": "Departamento Pessoal",
+      "situacao": "producao",
+      "execucao": "A definir",
+      "roda_em": ["servidor", "cloudflare"],
+      "minutos_mes": 752,
+      "documentacao": "completa",
+      "publicado": true,
+      "iniciado_em": "2026-11-16",
+      "atualizado_em": "2026-11-16"
     }
   ]
 }
