@@ -67,8 +67,9 @@
       "execucao": "Tarefa agendada",
       "roda_em": ["servidor"],
       "minutos_mes": null,
-      "documentacao": "pendente",
-      "publicado": true
+      "documentacao": "completa",
+      "publicado": true,
+      "atualizado_em": "2026-11-17"
     },
     {
       "id": "novas-admissoes",
