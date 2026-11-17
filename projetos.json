@@ -26,7 +26,7 @@
       "situacao": "producao",
       "execucao": "Serviço",
       "roda_em": ["servidor"],
-      "minutos_mes": null,
+      "minutos_mes": 58,
       "documentacao": "completa",
       "publicado": true,
       "atualizado_em": "2026-11-17"
