@@ -1,12 +1,12 @@
 {
   "organizacao": "evolvi-solucoes",
-  "atualizado_em": "2026-11-16",
+  "atualizado_em": "2026-11-17",
   "areas": ["Financeiro", "Fiscal", "Departamento Pessoal", "Integração", "Infraestrutura", "Gestão", "Sucesso do Cliente", "Contábil"],
   "projetos": [
     {
-      "id": "marcar-pagos-nibo",
+      "id": "nibo-marcar-pago",
       "nome": "Marcar Pagos (Nibo)",
-      "repositorio": "https://github.com/evolvi-solucoes/marcar-pagos-nibo",
+      "repositorio": "https://github.com/evolvi-solucoes/nibo-marcar-pago",
       "resumo": "Marca como pagos no Nibo os honorários contábeis que a Omie registra como recebidos. O cliente deixa de ver um honorário pago como vencido.",
       "area": "Financeiro",
       "situacao": "producao",
@@ -14,7 +14,8 @@
       "roda_em": ["servidor"],
       "minutos_mes": null,
       "documentacao": "completa",
-      "publicado": false
+      "publicado": true,
+      "atualizado_em": "2026-11-17"
     },
     {
       "id": "dapi-desobrigar",
