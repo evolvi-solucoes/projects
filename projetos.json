@@ -18,9 +18,9 @@
       "atualizado_em": "2026-11-17"
     },
     {
-      "id": "dapi-desobrigar",
+      "id": "dapi",
       "nome": "DAPI (desobrigar)",
-      "repositorio": "https://github.com/evolvi-solucoes/dapi-desobrigar",
+      "repositorio": "https://github.com/evolvi-solucoes/dapi",
       "resumo": "Baixa os comunicados \"Desobrigar DAPI\" da SEF/MG e lista as empresas clientes desobrigadas. A área fiscal evita a entrega indevida da DAPI.",
       "area": "Fiscal",
       "situacao": "producao",
@@ -28,7 +28,8 @@
       "roda_em": ["servidor"],
       "minutos_mes": null,
       "documentacao": "completa",
-      "publicado": false
+      "publicado": true,
+      "atualizado_em": "2026-11-17"
     },
     {
       "id": "supervisor-automacoes",
