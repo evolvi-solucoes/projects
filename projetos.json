@@ -97,9 +97,9 @@
       "publicado": false
     },
     {
-      "id": "api-sindicatos",
+      "id": "sindicatos",
       "nome": "API de sindicatos",
-      "repositorio": "https://github.com/evolvi-solucoes/api-sindicatos",
+      "repositorio": "https://github.com/evolvi-solucoes/sindicatos",
       "resumo": "Disponibiliza numa API a relação entre empresas e sindicatos. Atualiza os dados a cada hora e avisa no Slack quando o dado fica desatualizado.",
       "area": "Departamento Pessoal",
       "situacao": "producao",
@@ -107,7 +107,8 @@
       "roda_em": ["servidor"],
       "minutos_mes": null,
       "documentacao": "completa",
-      "publicado": false
+      "publicado": true,
+      "atualizado_em": "2026-11-17"
     },
     {
       "id": "check-esocial",
