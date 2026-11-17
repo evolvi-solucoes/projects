@@ -149,8 +149,9 @@
       "execucao": "Serviço",
       "roda_em": ["servidor"],
       "minutos_mes": null,
-      "documentacao": "pendente",
-      "publicado": false
+      "documentacao": "completa",
+      "publicado": true,
+      "atualizado_em": "2026-11-17"
     },
     {
       "id": "criar-contatos-nibo",
