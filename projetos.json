@@ -190,17 +190,18 @@
       "publicado": true
     },
     {
-      "id": "monitor-versao-questor",
+      "id": "update-questor",
       "nome": "Monitor de versão do Questor",
-      "repositorio": "https://github.com/evolvi-solucoes/monitor-versao-questor",
+      "repositorio": "https://github.com/evolvi-solucoes/update-questor",
       "resumo": "Verifica se o Questor publicou uma versão nova e avisa a equipe no Discord. A equipe atualiza o sistema sem atraso.",
       "area": "Infraestrutura",
       "situacao": "producao",
       "execucao": "Tarefa agendada",
       "roda_em": ["servidor"],
       "minutos_mes": null,
-      "documentacao": "pendente",
-      "publicado": false
+      "documentacao": "completa",
+      "publicado": true,
+      "atualizado_em": "2026-11-17"
     },
     {
       "id": "painel-automacoes-legado",
