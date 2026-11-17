@@ -47,6 +47,7 @@ Este arquivo segue o formato Keep a Changelog e o versionamento semântico (SemV
 - Testes de borda de situação e de datas.
 
 ### Changed
+- Sete projetos apontam para o repositório real e mostram a documentação completa: Marcar Pagos, DAPI, sindicatos, Check eSocial, monitor de versão do Questor, Novas admissões e Crédito do Trabalhador. O `id` segue o nome do repositório.
 - Datas de última mudança de `guias-whatsapp` e `evolvi-cronus`: a documentação ganhou o cenário Make atual.
 - A skill `portfolio-sistemas` passou a se chamar `projeto`.
 - O portfólio mostra os projetos desde o início, e não só as automações em produção.
