@@ -12,7 +12,7 @@
       "situacao": "producao",
       "execucao": "Tarefa agendada",
       "roda_em": ["servidor"],
-      "minutos_mes": null,
+      "minutos_mes": 200,
       "documentacao": "completa",
       "publicado": true,
       "atualizado_em": "2026-11-17"
