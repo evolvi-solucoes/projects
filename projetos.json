@@ -435,9 +435,9 @@
       "execucao": "A definir",
       "roda_em": ["make"],
       "minutos_mes": null,
-      "documentacao": "completa",
+      "documentacao": "parcial",
       "publicado": true,
-      "atualizado_em": "2026-11-14"
+      "atualizado_em": "2026-11-18"
     },
     {
       "id": "avisos-aniversarios-ferias",
