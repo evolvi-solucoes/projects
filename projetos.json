@@ -1,6 +1,6 @@
 {
   "organizacao": "evolvi-solucoes",
-  "atualizado_em": "2026-11-17",
+  "atualizado_em": "2026-11-18",
   "areas": ["Financeiro", "Fiscal", "Departamento Pessoal", "Integração", "Infraestrutura", "Gestão", "Sucesso do Cliente", "Contábil"],
   "projetos": [
     {
@@ -32,17 +32,18 @@
       "atualizado_em": "2026-11-17"
     },
     {
-      "id": "supervisor-automacoes",
+      "id": "supervisor",
       "nome": "Supervisor de automações",
-      "repositorio": "https://github.com/evolvi-solucoes/supervisor-automacoes",
+      "repositorio": "https://github.com/evolvi-solucoes/supervisor",
       "resumo": "Verifica as automações do servidor a cada minuto. Mostra o estado de cada uma num painel e avisa no Slack quando uma falha.",
       "area": "Infraestrutura",
       "situacao": "producao",
       "execucao": "Serviço",
       "roda_em": ["servidor"],
       "minutos_mes": null,
-      "documentacao": "parcial",
-      "publicado": false
+      "documentacao": "completa",
+      "publicado": true,
+      "atualizado_em": "2026-11-18"
     },
     {
       "id": "nibo-omie",
