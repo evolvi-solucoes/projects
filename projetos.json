@@ -156,17 +156,18 @@
       "atualizado_em": "2026-11-17"
     },
     {
-      "id": "criar-contatos-nibo",
+      "id": "nibo-criar-contatos",
       "nome": "Criar contatos (Nibo)",
-      "repositorio": "https://github.com/evolvi-solucoes/criar-contatos-nibo",
+      "repositorio": "https://github.com/evolvi-solucoes/nibo-criar-contatos",
       "resumo": "Cria os contatos das empresas clientes no Nibo e libera o acesso aos departamentos. Usa uma fila com pausa para respeitar o limite do Nibo.",
       "area": "Integração",
       "situacao": "producao",
       "execucao": "Serviço",
       "roda_em": ["servidor"],
       "minutos_mes": null,
-      "documentacao": "pendente",
-      "publicado": false
+      "documentacao": "completa",
+      "publicado": true,
+      "atualizado_em": "2026-11-18"
     },
     {
       "id": "proxy-webhooks",
