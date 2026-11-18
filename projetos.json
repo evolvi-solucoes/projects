@@ -565,6 +565,20 @@
       "publicado": true,
       "iniciado_em": "2026-11-16",
       "atualizado_em": "2026-11-16"
+    },
+    {
+      "id": "cnab",
+      "nome": "CNAB (remessa CAIXA)",
+      "repositorio": "https://github.com/evolvi-solucoes/cnab",
+      "resumo": "Corrige a remessa de salários gerada no Questor para o leiaute da CAIXA. O banco aceita o arquivo sem retrabalho.",
+      "area": "Departamento Pessoal",
+      "situacao": "producao",
+      "execucao": "Serviço",
+      "roda_em": ["servidor"],
+      "minutos_mes": null,
+      "documentacao": "completa",
+      "publicado": true,
+      "atualizado_em": "2026-11-18"
     }
   ]
 }
