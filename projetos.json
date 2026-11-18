@@ -87,17 +87,18 @@
       "atualizado_em": "2026-11-17"
     },
     {
-      "id": "holerites-questor",
-      "nome": "Holerites (Questor)",
-      "repositorio": "https://github.com/evolvi-solucoes/holerites-questor",
-      "resumo": "Emite no Questor os holerites das empresas pendentes e atualiza a situação de cada empresa no Notion.",
+      "id": "holerites",
+      "nome": "Holerites",
+      "repositorio": "https://github.com/evolvi-solucoes/holerites",
+      "resumo": "Entrega aos clientes, pelo QColabore, os holerites pedidos pelo WhatsApp. Tira essa carga dos analistas do Departamento Pessoal.",
       "area": "Departamento Pessoal",
-      "situacao": "producao",
+      "situacao": "andamento",
       "execucao": "Serviço",
       "roda_em": ["servidor"],
       "minutos_mes": null,
-      "documentacao": "pendente",
-      "publicado": false
+      "documentacao": "completa",
+      "publicado": true,
+      "atualizado_em": "2026-11-18"
     },
     {
       "id": "sindicatos",
