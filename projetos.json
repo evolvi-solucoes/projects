@@ -191,7 +191,7 @@
       "repositorio": "https://github.com/evolvi-solucoes/nweb-proxy",
       "resumo": "Libera a clientes externos só as consultas e importações aprovadas do nWeb (Questor). Exige token e identifica a empresa pelo CNPJ.",
       "area": "Integração",
-      "situacao": "producao",
+      "situacao": "andamento",
       "execucao": "Serviço",
       "roda_em": ["servidor"],
       "minutos_mes": null,
