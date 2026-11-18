@@ -5,6 +5,7 @@ Este arquivo segue o formato Keep a Changelog e o versionamento semântico (SemV
 ## [Unreleased]
 
 ### Added
+- Projeto `cnab` (CNAB, remessa CAIXA) em produção, com documentação completa.
 - Projeto `notion-questor-vidas` (Sincronização de Vidas) em produção, com documentação completa.
 - Projeto `rotina-workers-cloudflare` (Rotina Workers Cloudflare) em produção, com documentação completa.
 - Host `claude` no campo `roda_em`, com ícone do Claude.
@@ -47,6 +48,9 @@ Este arquivo segue o formato Keep a Changelog e o versionamento semântico (SemV
 - Testes de borda de situação e de datas.
 
 ### Changed
+- Supervisor, Relatório NFS-e, Criar contatos (Nibo), Holerites e Proxy Zen apontam para o repositório real e mostram a documentação completa. O `id` segue o nome do repositório.
+- Holerites volta para "em andamento": o robô está em testes.
+- O Painel de automações (legado) passa para "desativado". O Supervisor substitui o painel.
 - Oito projetos apontam para o repositório real e mostram a documentação completa: Marcar Pagos, DAPI, sindicatos, Check eSocial, monitor de versão do Questor, Novas admissões, Crédito do Trabalhador e Extrator de documentos por IA. O `id` segue o nome do repositório.
 - Minutos economizados por mês nesses oito projetos, a partir do volume de cada PDD.
 - Datas de última mudança de `guias-whatsapp` e `evolvi-cronus`: a documentação ganhou o cenário Make atual.
