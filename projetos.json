@@ -171,17 +171,18 @@
       "atualizado_em": "2026-11-18"
     },
     {
-      "id": "proxy-webhooks",
-      "nome": "Proxy de webhooks",
-      "repositorio": "https://github.com/evolvi-solucoes/proxy-webhooks",
-      "resumo": "Recebe requisições de clientes, valida CNPJ e token e repassa cada requisição à API correta. Substitui um cenário pago do Make.",
+      "id": "proxy-zen",
+      "nome": "Proxy Zen",
+      "repositorio": "https://github.com/evolvi-solucoes/proxy-zen",
+      "resumo": "Deixa um cliente consultar e baixar no Zen só as notas fiscais das próprias empresas. Substitui um cenário pago do Make.",
       "area": "Integração",
       "situacao": "producao",
       "execucao": "Serviço",
       "roda_em": ["servidor"],
       "minutos_mes": null,
-      "documentacao": "parcial",
-      "publicado": false
+      "documentacao": "completa",
+      "publicado": true,
+      "atualizado_em": "2026-11-18"
     },
     {
       "id": "nweb-proxy",
