@@ -217,12 +217,13 @@
       "repositorio": "https://github.com/evolvi-solucoes/painel-automacoes-legado",
       "resumo": "Mostra quais automações estão abertas no servidor e avisa no Discord quando uma para. O Supervisor de automações substitui este painel.",
       "area": "Infraestrutura",
-      "situacao": "producao",
+      "situacao": "desativado",
       "execucao": "Serviço",
       "roda_em": ["servidor"],
       "minutos_mes": null,
       "documentacao": "pendente",
-      "publicado": false
+      "publicado": false,
+      "atualizado_em": "2026-11-18"
     },
     {
       "id": "gob-sync",
