@@ -48,6 +48,8 @@ Este arquivo segue o formato Keep a Changelog e o versionamento semântico (SemV
 - Testes de borda de situação e de datas.
 
 ### Changed
+- Minutos economizados por mês: Relatório NFS-e (15.000) e Criar contatos (10). Omie – lançamento de guias e CNAB ficam com 0, porque não economizam tempo da equipe.
+- Proxy nWeb volta para "em andamento": a integração do cliente está em desenvolvimento.
 - Supervisor, Relatório NFS-e, Criar contatos (Nibo), Holerites e Proxy Zen apontam para o repositório real e mostram a documentação completa. O `id` segue o nome do repositório.
 - Holerites volta para "em andamento": o robô está em testes.
 - O Painel de automações (legado) passa para "desativado". O Supervisor substitui o painel.
@@ -63,6 +65,7 @@ Este arquivo segue o formato Keep a Changelog e o versionamento semântico (SemV
 - A cópia da skill saiu do repositório. A skill fica só na conta do claude.ai.
 
 ### Fixed
+- O campo `documentacao` segue a `main` de cada repositório: Omie – lançamento de guias e Proxy nWeb passam a "completa", e Lembrete de tarefas (Notion) passa a "parcial".
 - A data "Lista atualizada em" mostra 11/11/2026, a data da inclusão da situação.
 - A página ignora projetos com campo vazio, valor fora do padrão ou `id` repetido.
 - A busca encontra cada palavra em separado.
