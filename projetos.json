@@ -1,6 +1,6 @@
 {
   "organizacao": "evolvi-solucoes",
-  "atualizado_em": "2026-11-18",
+  "atualizado_em": "2026-11-26",
   "areas": ["Financeiro", "Fiscal", "Departamento Pessoal", "Integração", "Infraestrutura", "Gestão", "Sucesso do Cliente", "Contábil"],
   "projetos": [
     {
@@ -581,6 +581,18 @@
       "documentacao": "completa",
       "publicado": true,
       "atualizado_em": "2026-11-18"
+    },
+    {
+      "id": "admissao-web",
+      "nome": "Admissão Web",
+      "repositorio": "https://github.com/evolvi-solucoes/admissao-web",
+      "resumo": "O cliente envia os documentos do trabalhador e os dados preenchem a admissão. O cliente confere e envia a pré-admissão ao sistema de folha, sem digitação manual do DP.",
+      "area": "Departamento Pessoal",
+      "situacao": "andamento",
+      "execucao": "Manual",
+      "documentacao": "completa",
+      "publicado": true,
+      "atualizado_em": "2026-11-26"
     }
   ]
 }
