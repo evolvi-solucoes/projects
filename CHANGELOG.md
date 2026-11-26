@@ -5,6 +5,7 @@ Este arquivo segue o formato Keep a Changelog e o versionamento semântico (SemV
 ## [Unreleased]
 
 ### Added
+- Projeto `admissao-web` (Admissão Web) em andamento, com documentação completa.
 - Projeto `cnab` (CNAB, remessa CAIXA) em produção, com documentação completa.
 - Projeto `notion-questor-vidas` (Sincronização de Vidas) em produção, com documentação completa.
 - Projeto `rotina-workers-cloudflare` (Rotina Workers Cloudflare) em produção, com documentação completa.
